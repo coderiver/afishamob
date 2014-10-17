@@ -1,42 +1,42 @@
 // # SHORT HOWTO
 // ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
+//		 .whatever
+//					+sized-sprite($icons, coderiver) //or
 // 			+s(codedby) //gets default value for spritemap as $icons
 // ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
+//		 +include keyframes(rotate)
+//				from
+//					 +rotate(0)
+//				to
+//					 +rotate(360)
 // ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
+//		 body:hover
+// 			+animation(rotate 200s linear infinite)
 // ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
+//		 transition: all 1.2s ceaser($ease-in)
 // ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
+//		 +background-image(linear-gradient(#232323, #5c5c5c));
+//		 +g(#232323, #5c5c5c);
+//		 horizontal
+//		 +gh(#232323, #5c5c5c);
 // ## making bw-images
-//     img
+//		 img
 //			@extend %gray
 // ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
+//		 +min-screen(320)
 //			display: none
 // +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
 //
 // ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
+//		 @for $i from 1 through 3
+//			 .item-#{$i}
 //			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
+//		 @each $s in a,b,c
+// 				#{$s}
 //				display: none
 // ## fonts 
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
+// +font(book, cytiapro-black-webfont)	
 // =book
 // 	font-family: "book", Arial, sans-serif 
 // insert pics into css
@@ -46,29 +46,667 @@
 // 	+png(blabla)
 // p
 // 	+jpg(bla)
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic)
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic)
+=fn
+	font-family: "PT Sans Narrow", Arial, sans-serif 
+=f
+	font-family: "PT Sans", Arial, sans-serif 
+
+$red: #d62828
+$redd: #a70b0b
+$green: #00b46e
+$blue: #008bf0
+$bluel: #00c7ff
+$yellow: #fff600
+$cl: #1e1919
+
+@font-face
+	font-family: 'fontello'
+	src: url('../font/fontello.eot?30356858')
+	src: url('../font/fontello.eot?30356858#iefix') format("embedded-opentype"), url('../font/fontello.woff?30356858') format("woff"), url('../font/fontello.ttf?30356858') format("truetype"), url('../font/fontello.svg?30356858#fontello') format("svg")
+	font-weight: normal
+	font-style: normal
+	
+.icon
+	display: inline-block
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+
+[class^="icon-"]:before, [class*=" icon-"]:before
+	display: inline-block
+	font-family: "fontello"
+	font-style: normal
+	font-weight: normal
+	speak: none
+
+.icon-facebook:before
+	content: '\e800'
+.icon-odnoklassniki:before
+	content: '\e801'
+.icon-twitter:before
+	content: '\e802'
+.icon-vkontakte:before
+	content: '\e803'
+.icon-search:before
+	content: '\e804'
+.icon-shop:before
+	content: '\e805'
+.icon-a42:before
+	content: '\e806'
+.icon-bear:before
+	content: '\e807'
+.icon-star:before
+	content: '\e808'
+.icon-theatre:before
+	content: '\e809'
+.icon-bicycle:before
+	content: '\e80a'
+.icon-camera:before
+	content: '\e80b'
+.icon-waves:before
+	content: '\e80c'
+.icon-wtf:before
+	content: '\e80d'
+.icon-check:before
+	content: '\e80e'
+.icon-cinema:before
+	content: '\e80f'
+.icon-cup:before
+	content: '\e810'
+.icon-disco:before
+	content: '\e811'
+.icon-drink:before
+	content: '\e812'
+.icon-drop:before
+	content: '\e813'
+.icon-food:before
+	content: '\e814'
+.icon-graph:before
+	content: '\e815'
+.icon-kids:before
+	content: '\e816'
+.icon-lamp:before
+	content: '\e817'
+.icon-logo-wow:before
+	content: '\e818'
+.icon-marker:before
+	content: '\e819'
+.icon-music:before
+	content: '\e81a'
+.icon-park:before
+	content: '\e81b'
+.icon-picture:before
+	content: '\e81c'
+.icon-more:before
+	content: '\e81d'
+.icon-down-open:before
+	content: '\e81e'
+.icon-cancel:before
+	content: '\e81f'
 
 
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
-	line-height: 1.4
+	min-width: 480px
+	+f
+	font-size: 23px 
+	line-height: 1.3
+	color: $cl
+	overflow: hidden
+a
+	text-decoration: none
+	color: $cl 
+button
+	background: none 
+button, input, textarea
+	+f
+	font-size: 23px
 
+// common blocks			
+.wrapper
 
-// common blocks      
+.header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0 
+	height: 74px
+	padding: 12px 20px
+	background: #000 
+	+clr
+	z-index: 99 
 
+.btn-menu
+	float: left
+	width: 50px
+	height: 50px
+	margin-right: 10px
+	border-radius: 4px
+	background: #4e4c4c
+	font-size: 0
+	&.is-active
+		background: #E5E5E5
+		i
+			border-color: #000
+			&:before, &:after
+				background: #000 
+	i
+		display: inline-block
+		width: 28px
+		border-top: 3px solid #fff
+		vertical-align: middle
+		&:before, &:after
+			content: ""
+			display: inline-block
+			width: 28px
+			height: 3px
+			margin-top: 7px
+			background: #FFF 
+			vertical-align: top
 
+.btn-search
+	float: right
+	width: 50px
+	height: 50px
+	margin-left: 15px
+	background: #4e4c4c
+	border-radius: 4px 
+	&.is-active
+		background: #E5E5E5
+		.icon
+			color: #6B6B6B
+	.icon
+		font-size: 32px
+		color: #fff
+			
+.logo
+	float: left
+	height: 50px
+	+fn
+	font-size: 35px
+	color: #FFF 
+	line-height: 50px
+	
+.logo-a42
+	float: right
+	.icon
+		font-size: 50px
+		color: $blue 
 
+.container
+	position: absolute
+	top: 74px
+	left: 0
+	right: 0
+	bottom: 0
+	+tr(transform .4s)
+	overflow: auto
+	-webkit-overflow-scrolling: touch
+	&.is-moved-menu,
+	&.is-moved-projects
+		&:after
+			visibility: visible
+			opacity: 1 
+	&.is-moved-menu
+		+transform(translateX(310px))
+	&.is-moved-projects
+		+transform(translateX(480px))
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba(0,0,0,.1) 
+		visibility: hidden
+		opacity: 0
+		+tr(opacity .2s) 
+		z-index: 999 
+	.container__in
+		padding: 15px 20px 20px
 
+.search
+	display: none
+	.search__in
+		padding: 15px 20px 20px
+		border-bottom: 10px solid $yellow 
+		+fn
+		font-size: 35px
+	.search__text
+		margin-bottom: 10px
+	.search__select, .search__word
+		display: inline-block
+		margin-bottom: 10px
+		position: relative
+	.search__word
+		margin: 0 2px
+	.search__select-head
+		display: inline-block
+		padding: 2px 2px 6px
+		background: $yellow	
+		line-height: 1
+		cursor: pointer
+		&:after
+			content: ""
+			position: absolute
+			left: 2px
+			right: 2px
+			bottom: 4px
+			border-bottom: 2px dashed $cl 
+	.search__select-list
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border: none
+		opacity: 0 
+	.search__actions
+		a
+			display: inline-block
+			padding: 0 8px
+			border: 5px solid #d7d7d7
 
+.types
+	.types__item
+		position: relative
+		min-height: 85px
+		&.is-active
+			background: none 
+			.types__title
+				text-decoration: none
+	.types__title
+		min-height: 85px
+		padding: 20px
+		+fn
+		font-size: 35px
+		text-decoration: underline
+		color: #fff 
+		cursor: pointer
+		+tr(height .3s)
+		&.is-active
+			height: 85px !important
+	.types__item_events
+		.types__title
+			background: $red
+			&.is-active
+				background: #FFF 
+				color: $red
+		.types__in
+			border-color: $red
+	.types__item_places
+		.types__title
+			background: $green
+			&.is-active
+				background: #FFF 
+				color: $green
+		.types__in
+			border-color: $green
+	.types__item_cities
+		.types__title
+			background: $blue
+			&.is-active
+				background: #FFF 
+				color: $blue
+		.types__in
+			border-color: $blue
+	.types__in
+		display: none
+		padding: 0 20px 10px 
+		border-bottom: 10px solid transparent 
+	
+.attention
+	margin-bottom: 20px
+	+fn
+	font-size: 25px 
 
+.list
+	&.list_red
+		.item__date, .item__map
+			color: $redd
+	&.list_green
+		.item__date, .item__map
+			color: $green
+	&.list_blue
+		.item__date, .item__map
+			color: $blue
 
+.item
+	margin-bottom: 30px
+	+clr
+	&.item_big
+		.item__pic
+			display: block
+			float: none
+			margin: 0 0 20px
+	.item__pic
+		position: relative
+		float: left
+		margin-right: 20px
+		img
+			display: block
+			max-width: 100%
+	.item__in
+		display: table
+	.item__title
+		margin-bottom: 15px
+		font-weight: 700 
+	.item__title_color
+		margin-bottom: 5px
+		font-weight: 400
+		color: $blue
+		a
+			color: $blue 
+	.item__text
+		& + .item__date, & + .item__map
+			margin-top: 15px
+	.item__date, .item__map
+		font-size: 16px
+		.icon
+			margin-right: 5px
+	.item__date
+		margin-bottom: 10px
+		.icon
+			position: relative
+			top: -1px
+			font-size: 12px
 
+.banner
+	margin-bottom: 30px
+	img
+		display: block
 
+.load
+	margin-bottom: 30px
+	text-align: center
+	&.load_red
+		.icon
+			color: $red
+	&.load_green
+		.icon
+			color: $green
+	&.load_blue
+		.icon
+			color: $blue
+	span
+		border-bottom: 2px solid #868686
+	.icon
+		margin-right: 10px
+		font-size: 15px
 
+.menu, .projects
+	position: fixed
+	top: 74px
+	left: 0
+	bottom: 0
+	background: #f3f3f3
+	+tr(transform .4s)
+	overflow: auto
+	-webkit-overflow-scrolling: touch
+	z-index: 999 
+	&.is-open
+		+transform(translateX(0px))
+		
+.menu
+	width: 310px
+	+transform(translateX(-310px))
+	z-index: 2 
+	.menu__in
+		background: #FFF 
+	.menu__item
+		border-bottom: 10px solid transparent
+	.menu__title
+		display: table
+		width: 100%
+		+fn
+		font-size: 35px
+		cursor: pointer
+		span
+			display: table-cell
+			height: 60px
+			vertical-align: middle
+			&:first-child
+				width: 60px
+				text-align: center
+		.icon
+			position: relative
+			top: -2px
+			font-size: 24px
+		&.is-active
+			color: #FFF 
+			.icon
+				top: -5px
+				+rotate(180)
+				color: #fff 
+	.menu__item_events
+		border-color: $red
+		.menu__title
+			color: $red 
+			&.is-active
+				background: $red
+				color: #FFF 
+		.menu__list
+			li
+				&:after
+					background: $red 
+			a
+				&:hover, &:active, &.is-active
+					background: $red 
+			.icon
+				color: $red 
+	.menu__item_places
+		border-color: $green
+		.menu__title
+			color: $green 
+			&.is-active
+				background: $green
+				color: #FFF 
+		.menu__list
+			li
+				&:after
+					background: $green 
+			a
+				&:hover, &:active, &.is-active
+					background: $green 
+			.icon
+				color: $green 
+	.menu__item_cities
+		border-color: $blue
+		.menu__title
+			color: $blue 
+			&.is-active
+				background: $blue
+				color: #FFF 
+		.menu__list
+			li
+				&:after
+					background: $blue 
+			a
+				&:hover, &:active, &.is-active
+					background: $blue 
+			.icon
+				color: $blue 
+	.menu__list
+		display: none
+		li
+			display: table
+			position: relative
+			width: 100%
+			margin-bottom: -1px
+			table-layout: fixed
+			&:after
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 10px
+				right: 10px
+				height: 1px
+				background: $green 
+			&:last-child
+				&:after
+					display: none
+		a
+			display: table-row
+			font-size: 20px
+			font-weight: 700 
+			line-height: 1
+			&:hover, &:active, &.is-active
+				background: $green 
+				color: #fff 
+				.icon
+					color: #fff
+		span
+			display: table-cell
+			height: 60px
+			vertical-align: middle
+			&:first-child
+				width: 60px
+				padding: 0 10px 
+				text-align: center
 
+.projects
+	width: 480px
+	+transform(translateX(-480px))
+	z-index: 4 
+	.projects__head
+		padding: 12px 20px 12px 80px
+		+clr
+	.projects__title
+		float: left
+		font-size: 35px
+		color: $bluel
+	.projects__close
+		float: right
+		margin-top: 11px
+		font-size: 0
+		.icon
+			font-size: 22px
+			color: #D7D7D7 
+	.projects__type
+		position: relative
+		padding: 7px 10px 7px 80px
+		background: $bluel
+		+fn
+		color: #FFF
+		font-size: 35px	
+		cursor: pointer
+		&.is-active
+			background: #000 
+			.icon
+				top: 12px
+				+rotate(180)
+		.icon
+			position: absolute
+			top: 15px
+			left: 40px
+			font-size: 30px
+	.projects__list
+		display: none
+		padding: 0 20px
+		li
+			border-top: 1px solid #d7d7d7
+			&:first-child
+				border: none
+		a
+			display: block
+			margin: 0 -20px
+			padding: 17px 20px 17px 80px
+			font-size: 20px
+			font-weight: 700 
+			
+.footer
+	padding: 30px 20px 20px
 
+.enter
+	margin-bottom: 20px
+	overflow: hidden
+	a
+		float: left
+		padding: 0 8px
+		background: #FFF 
+		border: 5px solid #d7d7d7
+		+fn
+		font-size: 32px
+		&:first-child
+			margin-right: 20px
 
+.footer__info
+	margin-bottom: 15px
+	+clr
 
+.logo-a42-small
+	float: left
+	padding-top: 1px
+	font-size: 0
+	img
+		width: 104px
+
+.sixteenplus
+	float: right
+	+fn
+	font-size: 25px
+
+.copyright
+	margin-bottom: 20px
+	font-size: 16px
+	color: #727272 
+	p
+		position: relative
+		&:first-child
+			&:before
+				content: "©"
+				position: absolute
+				top: 1px
+				left: -15px
+				font-size: 14px
+
+.title
+	display: table
+	width: 100%
+	padding-bottom: 10px
+	margin-bottom: 35px
+	border-bottom: 5px solid
+	&.title_blue
+		color: $blue 
+	&.title_red
+		color: $red 
+	&.title_small
+		.title__cell
+			font-size: 23px
+			&:first-child
+				width: 25px
+	& + .map
+		margin-top: -35px 
+	.title__cell
+		display: table-cell
+		+fn
+		font-size: 35px
+		line-height: 1
+		vertical-align: top
+		&:first-child
+			width: 35px
+	.title__cell_age
+		padding: 12px 0 0 10px
+		text-align: right
+		font-size: 20px
+	.icon
+		position: relative
+		top: -3px
+		font-size: 18px
+		vertical-align: middle
+
+.details
+	width: auto
+	margin-bottom: 30px
+	font-size: 16px
+	td
+		padding-bottom: 5px
+		&:first-child
+			padding-right: 30px
+			color: $red 
+	a
+		border-bottom: 1px dashed 
 
 
 
