@@ -194,41 +194,29 @@
 		<div class="container__in">
 			<!-- title -->
 			<div class="title title_red">
-				<div class="title__cell"><i class="icon icon-music"></i></div>
-				<div class="title__cell">Концерт группы «ABBA»</div>
-				<div class="title__cell title__cell_age">12+</div>
+				<div class="title__cell"><i class="icon icon-cinema"></i></div>
+				<div class="title__cell">Трансформеры</div>
+			</div>
+			<!-- tabs -->
+			<div class="tabs">
+				<a class="is-active" href="#">Описание</a>
+				<a href="#">Расписание</a>
 			</div>
 			<!-- list -->
 			<div class="list">
-				<!-- details -->
-				<table class="details">
-					<tr>
-						<td>Дата:</td>
-						<td>16 октября, 19:00</td>
-					</tr>
-					<tr>
-						<td>Место:</td>
-						<td><a class="js-link-anchor" href="#map">Музей изобразительных искусств</a></td>
-					</tr>
-					<tr>
-						<td>Цена:</td>
-						<td>1 000 — 2 400 руб.</td>
-					</tr>
-				</table>
-				<!-- banner -->
-				<div class="banner">
-					<a href="#">
-						<img src="http://placehold.it/230x80" alt="">
-					</a>
-				</div>
 				<!-- item -->
-				<div class="item item_big">
+				<div class="item item_movie">
 					<a class="item__pic" href="#">
-						<img src="http://placehold.it/440x290" alt="">
+						<img src="http://placehold.it/220x300" alt="">
 					</a>
 					<div class="item__in">
-						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
-						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
+						<ul class="item__params">
+							<li><span>Жанр:</span> драма, мелодрама, комедия, музыкальный</li>
+							<li><span>Режиссёр:</span> Майкл Бэй</li>
+							<li><span>Актёры:</span> Никола Пелц, Марк Уолберг, Т. Дж. Миллер</li>
+							<li><span>Страна:</span> США, 2014</li>
+							<li><span>Продолжительность:</span> 120 мин.</li>
+						</ul>
 					</div>
 				</div>
 				<!-- banner -->
@@ -237,46 +225,45 @@
 						<img src="http://placehold.it/230x80" alt="">
 					</a>
 				</div>
+				<!-- item -->
+				<div class="item">
+					<div class="item__text item__text_toggle">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство. В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство. В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство. В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
+					<div class="load load_dashed load_red">
+						<button class="js-text-toggle" data-text-hide="Скрыть" data-text-show="Показать ещё"><i class="icon icon-more"></i><span>Показать ещё</span></button>
+					</div>
+				</div>
+				<!-- btn-trailer -->
+				<button class="btn-trailer">Посмотреть трейлер</button>
+				<!-- banner -->
+				<div class="banner">
+					<a href="#">
+						<img src="http://placehold.it/230x80" alt="">
+					</a>
+				</div>
+				<!-- title -->
+				<div class="title title_red title_small">
+					<div class="title__cell">Кадры</div>
+				</div>
+				<!-- slider -->
+				<div class="slider js-slider">
+					<div class="slider__item">
+						<a href="#"><img src="http://placehold.it/410x290" alt=""/></a>
+					</div>
+					<div class="slider__item">
+						<a href="#"><img src="http://placehold.it/410x290" alt=""/></a>
+					</div>
+					<div class="slider__item">
+						<a href="#"><img src="http://placehold.it/410x290" alt=""/></a>
+					</div>
+					<div class="slider__item">
+						<a href="#"><img src="http://placehold.it/410x290" alt=""/></a>
+					</div>
+				</div>
 			</div>
-			<!-- title -->
-			<div class="title title_small title_red">
-				<div class="title__cell"><div class="icon icon-marker"></div></div>
-				<div class="title__cell">Расположение</div>
-			</div>
-			<!-- map -->
-			<div id="map" class="map" style="width: 440px; height: 285px;"></div>
 		</div>
 	</div>
 </div>
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
-<!-- yandex maps -->
-<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<script>
-	var myMap;
-	// Дождёмся загрузки API и готовности DOM.
-	ymaps.ready(init);
-	function init () {
-	  // Создание экземпляра карты и его привязка к контейнеру с
-	  // заданным id ("map").
-	  myMap = new ymaps.Map('map', {
-	    // При инициализации карты обязательно нужно указать
-	    // её центр и коэффициент масштабирования.
-	    center: [55.76, 37.64], // Москва
-	    zoom: 14,
-	    controls: []
-	  }, {
-      scrollZoomSpeed: 0,
-      dblClickZoomDuration: 0
-    });
-    myMap.behaviors.disable(['default', 'drag', 'dblClickZoom', 'multiTouch', 'scrollZoom']);
-    myMap.geoObjects
-      .add(new ymaps.Placemark([55.76, 37.64], {
-        balloonContent: ''
-      }, {
-        iconColor: '#a5260a'
-      }))
-	}
-</script>
 </body>
 </html>

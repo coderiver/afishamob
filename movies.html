@@ -143,6 +143,15 @@
 			</div>
 		</div>
 	</div>
+	<!-- datepicker -->
+	<div class="dp js-dp">
+		<div class="dp__head">
+			<div class="dp__title">Выберите дату</div>
+			<button class="dp__close">
+				<i class="icon icon-cancel"></i>
+			</button>
+		</div>
+	</div>
 	<!-- container -->
 	<div class="container js-container">
 		<!-- search -->
@@ -194,27 +203,24 @@
 		<div class="container__in">
 			<!-- title -->
 			<div class="title title_red">
-				<div class="title__cell"><i class="icon icon-music"></i></div>
-				<div class="title__cell">Концерт группы «ABBA»</div>
-				<div class="title__cell title__cell_age">12+</div>
+				<div class="title__cell"><i class="icon icon-cinema"></i></div>
+				<div class="title__cell">Кино</div>
 			</div>
 			<!-- list -->
 			<div class="list">
-				<!-- details -->
-				<table class="details">
-					<tr>
-						<td>Дата:</td>
-						<td>16 октября, 19:00</td>
-					</tr>
-					<tr>
-						<td>Место:</td>
-						<td><a class="js-link-anchor" href="#map">Музей изобразительных искусств</a></td>
-					</tr>
-					<tr>
-						<td>Цена:</td>
-						<td>1 000 — 2 400 руб.</td>
-					</tr>
-				</table>
+				<!-- attention -->
+				<div class="attention">Расписание сеансов на <div class="btn-dp js-btn-dp">30 сентября (сегодня)</div></div>
+				<!-- item -->
+				<div class="item item_big">
+					<a class="item__pic" href="#">
+						<img src="http://placehold.it/440x290" alt="">
+					</a>
+					<div class="item__in">
+						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
+						<div class="item__rating">IMDb: 6.80/10</div>
+						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
+					</div>
+				</div>
 				<!-- banner -->
 				<div class="banner">
 					<a href="#">
@@ -228,6 +234,18 @@
 					</a>
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
+						<div class="item__rating">IMDb: 6.80/10</div>
+						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
+					</div>
+				</div>
+				<!-- item -->
+				<div class="item item_big">
+					<a class="item__pic" href="#">
+						<img src="http://placehold.it/440x290" alt="">
+					</a>
+					<div class="item__in">
+						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
+						<div class="item__rating">IMDb: 6.80/10</div>
 						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
 					</div>
 				</div>
@@ -238,45 +256,10 @@
 					</a>
 				</div>
 			</div>
-			<!-- title -->
-			<div class="title title_small title_red">
-				<div class="title__cell"><div class="icon icon-marker"></div></div>
-				<div class="title__cell">Расположение</div>
-			</div>
-			<!-- map -->
-			<div id="map" class="map" style="width: 440px; height: 285px;"></div>
 		</div>
 	</div>
 </div>
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
-<!-- yandex maps -->
-<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<script>
-	var myMap;
-	// Дождёмся загрузки API и готовности DOM.
-	ymaps.ready(init);
-	function init () {
-	  // Создание экземпляра карты и его привязка к контейнеру с
-	  // заданным id ("map").
-	  myMap = new ymaps.Map('map', {
-	    // При инициализации карты обязательно нужно указать
-	    // её центр и коэффициент масштабирования.
-	    center: [55.76, 37.64], // Москва
-	    zoom: 14,
-	    controls: []
-	  }, {
-      scrollZoomSpeed: 0,
-      dblClickZoomDuration: 0
-    });
-    myMap.behaviors.disable(['default', 'drag', 'dblClickZoom', 'multiTouch', 'scrollZoom']);
-    myMap.geoObjects
-      .add(new ymaps.Placemark([55.76, 37.64], {
-        balloonContent: ''
-      }, {
-        iconColor: '#a5260a'
-      }))
-	}
-</script>
 </body>
 </html>

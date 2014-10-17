@@ -16,6 +16,12 @@ head.ready(function() {
 			types = $('.js-types'),
 			types_title = types.find('.types__title'),
 			types_in = types.find('.types__in'),
+			link_anchor = $('.js-link-anchor'),
+			dp = $('.js-dp'),
+			dp_close = dp.find('.dp__close'),
+			btn_dp = $('.js-btn-dp'),
+			text_toggle = $('.js-text-toggle'),
+			slider = $('.js-slider'),
 			body = $('body');
 
 	// menu		
@@ -113,5 +119,82 @@ head.ready(function() {
 	//   	return false;
 	//   };
 	// });
+
+	// anchor
+	link_anchor.on('click', function () {
+		var id = $(this).attr('href'),
+				id_top = $(id).offset().top,
+				header_height = 74,
+				pos_top = id_top - header_height;
+		container.animate({scrollTop : pos_top}, 400);
+		return false;
+	});
+
+	// datepicker
+ 	btn_dp.on('click', function () {
+ 		$.datepicker.regional['ru'] = { 
+ 			closeText: 'Закрыть', 
+ 			prevText: '&#x3c;Пред', 
+ 			nextText: 'След&#x3e;', 
+ 			currentText: 'Сегодня', 
+ 			monthNames: ['января','февраля','марта','апреля','мая','июня', 
+ 			'июля','августа','сентября','октября','ноября','декабря'], 
+ 			monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн', 
+ 			'Июл','Авг','Сен','Окт','Ноя','Дек'], 
+ 			dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'], 
+ 			dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'], 
+ 			dayNamesMin: ['вс','пн','вт','ср','чт','пт','сб'], 
+ 			dateFormat: 'dd MM yy', 
+ 			firstDay: 1, 
+ 			minDate: 0,
+ 			isRTL: false
+ 		}; 
+ 		$.datepicker.setDefaults($.datepicker.regional['ru']);
+ 		var this_btn = $(this);
+ 		dp.datepicker({
+ 			onSelect: function(date) {
+ 				this_btn.text(date);
+ 				dp.slideUp();
+ 			}
+ 		});
+ 		dp.slideDown();
+ 	});
+ 	dp_close.on('click', function () {
+ 		dp.slideUp();
+ 	});
+
+ 	// toggle text
+ 	text_toggle.on('click', function () {
+ 		var el = $(this).parent().prev();
+		if (!el.hasClass('is-activated')) {
+			cur_height = el.height();
+			el.addClass('is-activated');
+		};
+		var	auto_height = el.css('height', 'auto').height(),
+		    text_hide = $(this).data('text-hide'),
+		    text_show = $(this).data('text-show');
+ 		if ($(this).hasClass('is-active')) {
+ 			$(this).removeClass('is-active');
+ 			$(this).find('span').text(text_show);
+ 			el.animate({height: cur_height}, 400);
+ 		}
+ 		else {
+ 			$(this).addClass('is-active');
+ 			$(this).find('span').text(text_hide);
+ 			el.height(cur_height).animate({height: auto_height}, 400);
+ 		}
+ 	});
+
+ 	// slider
+ 	if (slider.length) {
+ 		slider.slick({
+ 			dots: false,
+ 			arrows: false,
+ 			infinite: false,
+ 			slidesToShow: 2,
+ 			slidesToScroll: 1,
+ 			slide: '.slider__item'
+ 		});
+ 	};
 
 });
