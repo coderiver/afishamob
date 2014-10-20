@@ -9,7 +9,7 @@
 </head>
 <body>
 <!-- wrapper -->
-<div class="wrapper wrapper_blue">
+<div class="wrapper wrapper_green">
 	<!-- header -->
 	<header class="header">
 		<!-- btn-menu -->
@@ -143,6 +143,15 @@
 			</div>
 		</div>
 	</div>
+	<!-- datepicker -->
+	<div class="dp js-dp">
+		<div class="dp__head">
+			<div class="dp__title">Выберите дату</div>
+			<button class="dp__close">
+				<i class="icon icon-cancel"></i>
+			</button>
+		</div>
+	</div>
 	<!-- container -->
 	<div class="container js-container">
 		<!-- search -->
@@ -194,78 +203,164 @@
 		<div class="container__in">
 			<!-- title -->
 			<div class="title">
-				<div class="title__cell"><i class="icon icon-star"></i></div>
-				<div class="title__cell">Выбор редакции</div>
+				<div class="title__cell"><i class="icon icon-wtf"></i></div>
+				<div class="title__cell">Кинотеатр «Пионер»</div>
 			</div>
-			<!-- list -->
-			<div class="list">
-				<!-- item -->
-				<div class="item item_big">
+			<!-- attention -->
+			<div class="attention">Расписание сеансов на <div class="btn-dp js-btn-dp">30 сентября (сегодня)</div></div>
+			<!-- schedule -->
+			<div class="schedule">
+				<div class="schedule__title"><a href="#">Космос, Космический зал</a></div>
+				<ul class="schedule__list">
+					<li class="is-disabled"><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+				</ul>
+			</div>
+			<!-- schedule -->
+			<div class="schedule">
+				<div class="schedule__title"><a href="#">Планета Кино (Променад-3), Синий зал</a></div>
+				<ul class="schedule__list">
+					<li class="is-disabled"><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+				</ul>
+			</div>
+			<!-- banner -->
+			<div class="banner">
+				<a href="#">
+					<img src="http://placehold.it/230x80" alt="">
+				</a>
+			</div>
+			<!-- schedule -->
+			<div class="schedule">
+				<div class="schedule__title"><a href="#">Космос, Космический зал</a></div>
+				<ul class="schedule__list">
+					<li class="is-disabled"><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+				</ul>
+			</div>
+			<!-- schedule -->
+			<div class="schedule">
+				<div class="schedule__title"><a href="#">Планета Кино (Променад-3), Синий зал</a></div>
+				<ul class="schedule__list">
+					<li class="is-disabled"><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+					<li><span>09:50</span>210 р.</li>
+				</ul>
+			</div>
+			<!-- footnote -->
+			<div class="footnote">*Детям до 6 лет скидка 50%. Скидка распространяется на фильмы с возрастными ограничениями 0+ и 6+</div>
+			<!-- banner -->
+			<div class="banner">
+				<a href="#">
+					<img src="http://placehold.it/230x80" alt="">
+				</a>
+			</div>
+			<!-- title -->
+			<div class="title title_small">
+				<div class="title__cell">О кинотеатре</div>
+			</div>
+			<!-- details -->
+			<table class="details">
+				<tr>
+					<td>Адрес:</td>
+					<td><a class="pseudo-link js-link-anchor" href="#map">Музей изобразительных искусств</a></td>
+				</tr>
+				<tr>
+					<td>Телефон:</td>
+					<td>36-44-10, 36-30-31</td>
+				</tr>
+				<tr>
+					<td>Сайт:</td>
+					<td><a href="#">www.kuzbasskino.ru</a></td>
+				</tr>
+			</table>
+			<!-- item -->
+			<div class="item item_big">
+				<div class="item__gallery">
 					<a class="item__pic" href="#">
 						<img src="http://placehold.it/440x290" alt="">
 					</a>
-					<div class="item__in">
-						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
-						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
+					<div class="item__previews">
+						<div class="item__previews-in">
+							<a href="#">
+								<img src="http://placehold.it/100x100" alt="">
+							</a>
+							<a href="#">
+								<img src="http://placehold.it/100x100" alt="">
+							</a>
+							<a href="#">
+								<img src="http://placehold.it/100x100" alt="">
+							</a>
+							<a href="#">
+								<img src="http://placehold.it/100x100" alt="">
+							</a>
+						</div>
 					</div>
 				</div>
-				<!-- banner -->
-				<div class="banner">
-					<a href="#">
-						<img src="http://placehold.it/230x80" alt="">
-					</a>
+				<div class="item__in">
+					<div class="item__text">Изначально, до проведения реконструкции «Пионер» был классическим семейным кинотеатром, который посещали жители близлежащих районов. При проведении работ по реконструкции его большой зал был разделён на два маленьких, рассчитанных на 84 места. Обновлённый кинотеатр «Пионер» открылся в 2009 году и на сегодняшний день по своему техническому оснащению и качеству изображения и звука входит в число лучших кинотеатров не только Москвы, но и всей России.</div>
 				</div>
-				<!-- item -->
-				<div class="item item_big">
-					<a class="item__pic" href="#">
-						<img src="http://placehold.it/440x290" alt="">
-					</a>
-					<div class="item__in">
-						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
-						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
-					</div>
-				</div>
-				<!-- item -->
-				<div class="item item_big">
-					<a class="item__pic" href="#">
-						<img src="http://placehold.it/440x290" alt="">
-					</a>
-					<div class="item__in">
-						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
-						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
-					</div>
-				</div>
-				<!-- banner -->
-				<div class="banner">
-					<a href="#">
-						<img src="http://placehold.it/230x80" alt="">
-					</a>
-				</div>
-				<!-- item -->
-				<div class="item item_big">
-					<a class="item__pic" href="#">
-						<img src="http://placehold.it/440x290" alt="">
-					</a>
-					<div class="item__in">
-						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
-						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
-					</div>
-				</div>
-				<!-- item -->
-				<div class="item item_big">
-					<a class="item__pic" href="#">
-						<img src="http://placehold.it/440x290" alt="">
-					</a>
-					<div class="item__in">
-						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
-						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
-					</div>
-				</div>
+			</div>
+			<!-- banner -->
+			<div class="banner">
+				<a href="#">
+					<img src="http://placehold.it/230x80" alt="">
+				</a>
+			</div>
+			<!-- title -->
+			<div class="title title_small">
+				<div class="title__cell"><div class="icon icon-marker"></div></div>
+				<div class="title__cell">Расположение</div>
+			</div>
+			<!-- map -->
+			<div class="map-single">
+				<div id="map" style="width: 440px; height: 285px; border: 1px solid red;"></div>
 			</div>
 		</div>
 	</div>
 </div>
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+<!-- yandex maps -->
+<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script>
+	var myMap;
+	// Дождёмся загрузки API и готовности DOM.
+	ymaps.ready(init);
+	function init () {
+	  // Создание экземпляра карты и его привязка к контейнеру с
+	  // заданным id ("map").
+	  myMap = new ymaps.Map('map', {
+	    // При инициализации карты обязательно нужно указать
+	    // её центр и коэффициент масштабирования.
+	    center: [55.76, 37.64], // Москва
+	    zoom: 14,
+	    controls: []
+	  }, {
+      scrollZoomSpeed: 0,
+      dblClickZoomDuration: 0
+    });
+    myMap.behaviors.disable(['default', 'drag', 'dblClickZoom', 'multiTouch', 'scrollZoom']);
+    myMap.geoObjects
+      .add(new ymaps.Placemark([55.76, 37.64], {
+        balloonContent: ''
+      }, {
+        iconColor: '#00b46e'
+      }))
+	}
+</script>
 </body>
 </html>

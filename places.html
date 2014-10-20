@@ -9,7 +9,7 @@
 </head>
 <body>
 <!-- wrapper -->
-<div class="wrapper wrapper_blue">
+<div class="wrapper wrapper_green">
 	<!-- header -->
 	<header class="header">
 		<!-- btn-menu -->
@@ -194,8 +194,17 @@
 		<div class="container__in">
 			<!-- title -->
 			<div class="title">
-				<div class="title__cell"><i class="icon icon-star"></i></div>
-				<div class="title__cell">Выбор редакции</div>
+				<div class="title__cell"><i class="icon icon-wtf"></i></div>
+				<div class="title__cell">Достопримечательности</div>
+			</div>
+			<!-- map -->
+			<div class="map js-map">
+				<div class="map__in">
+					<div id="map" style="width: 440px;"></div>
+				</div>
+				<div class="load load_red">
+					<button data-text-hide="Скрыть карту" data-text-show="Развернуть карту"><i class="icon icon-more"></i><span>Развернуть карту</span></button>
+				</div>
 			</div>
 			<!-- list -->
 			<div class="list">
@@ -203,62 +212,72 @@
 				<div class="item item_big">
 					<a class="item__pic" href="#">
 						<img src="http://placehold.it/440x290" alt="">
+						<span class="item__counter">27 фото</span>
 					</a>
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
 						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
+						<div class="item__map"><i class="icon icon-marker"></i>Музей изобразительных исскуств</div>
 					</div>
 				</div>
 				<!-- banner -->
 				<div class="banner">
 					<a href="#">
-						<img src="http://placehold.it/230x80" alt="">
+						<img src="http://placehold.it/230x80" alt=""/>
 					</a>
 				</div>
 				<!-- item -->
 				<div class="item item_big">
 					<a class="item__pic" href="#">
 						<img src="http://placehold.it/440x290" alt="">
+						<span class="item__counter">27 фото</span>
 					</a>
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
 						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
+						<div class="item__map"><i class="icon icon-marker"></i>Музей изобразительных исскуств</div>
 					</div>
 				</div>
 				<!-- item -->
 				<div class="item item_big">
 					<a class="item__pic" href="#">
 						<img src="http://placehold.it/440x290" alt="">
+						<span class="item__counter">27 фото</span>
 					</a>
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
 						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
+						<div class="item__map"><i class="icon icon-marker"></i>Музей изобразительных исскуств</div>
 					</div>
 				</div>
 				<!-- banner -->
 				<div class="banner">
 					<a href="#">
-						<img src="http://placehold.it/230x80" alt="">
+						<img src="http://placehold.it/230x80" alt=""/>
 					</a>
 				</div>
 				<!-- item -->
 				<div class="item item_big">
 					<a class="item__pic" href="#">
 						<img src="http://placehold.it/440x290" alt="">
+						<span class="item__counter">27 фото</span>
 					</a>
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
 						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
+						<div class="item__map"><i class="icon icon-marker"></i>Музей изобразительных исскуств</div>
 					</div>
 				</div>
 				<!-- item -->
 				<div class="item item_big">
 					<a class="item__pic" href="#">
 						<img src="http://placehold.it/440x290" alt="">
+						<span class="item__counter">27 фото</span>
 					</a>
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
 						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
+						<div class="item__map"><i class="icon icon-marker"></i>Музей изобразительных исскуств</div>
 					</div>
 				</div>
 			</div>
@@ -267,5 +286,55 @@
 </div>
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+<!-- yandex maps -->
+<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script>
+	var myMap;
+	// Предполагаем, что points - исходный массив координат точек,
+	//  добавляемых на карту
+	var points = [
+	  ["55.768715", "37.510193"],
+	  ["55.728373", "37.669054"], 
+	  ["55.823500", "37.631000"],
+	  ["55.773300", "37.555100"]
+	];
+	// Дождёмся загрузки API и готовности DOM.
+	ymaps.ready(init);
+	function init () {
+		// Коллекция гео-точек, добавленных на карту
+		var myCollection = new ymaps.GeoObjectCollection();
+	  // Создание экземпляра карты и его привязка к контейнеру с
+	  // заданным id ("map").
+	  myMap = new ymaps.Map('map', {
+	    // При инициализации карты обязательно нужно указать
+	    // её центр и коэффициент масштабирования.
+	    center: [50, 50], // Москва
+	    zoom: 10,
+	    controls: []
+	  }, {
+      scrollZoomSpeed: 0,
+      dblClickZoomDuration: 0
+    });
+    myMap.behaviors.disable(['default', 'drag', 'dblClickZoom', 'multiTouch', 'scrollZoom']);
+    // Перебираем в цикле точки, которые надо добавить на карту
+    for (i = 0; i < points.length; i++ ){
+      var myPlacemark = new ymaps.Placemark([
+        points[i][0], points[i][1]
+      ], {
+        balloonContent: ''
+      }, {
+        iconColor: '#00b46e'
+      });
+      // Не забываем добавить точку в коллекцию -
+      //  впоследствии мы добавим всю коллекцию на карту
+      myCollection.add(myPlacemark);
+    }
+    // Добавляем точки на карту
+    myMap.geoObjects.add(myCollection);	
+    // Вычисляем необходимые координаты краёв карты и
+    //  устанавливаем их для нашего экземпляра карты	
+    myMap.setBounds(myCollection.getBounds());
+	}
+</script>
 </body>
 </html>

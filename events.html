@@ -9,7 +9,7 @@
 </head>
 <body>
 <!-- wrapper -->
-<div class="wrapper">
+<div class="wrapper wrapper_red">
 	<!-- header -->
 	<header class="header">
 		<!-- btn-menu -->
@@ -193,28 +193,28 @@
 		</div>
 		<div class="container__in">
 			<!-- title -->
-			<div class="title title_red">
+			<div class="title">
 				<div class="title__cell"><i class="icon icon-music"></i></div>
 				<div class="title__cell">Концерт группы «ABBA»</div>
 				<div class="title__cell title__cell_age">12+</div>
 			</div>
+			<!-- details -->
+			<table class="details">
+				<tr>
+					<td>Дата:</td>
+					<td>16 октября, 19:00</td>
+				</tr>
+				<tr>
+					<td>Место:</td>
+					<td><a class="pseudo-link js-link-anchor" href="#map">Музей изобразительных искусств</a></td>
+				</tr>
+				<tr>
+					<td>Цена:</td>
+					<td>1 000 — 2 400 руб.</td>
+				</tr>
+			</table>
 			<!-- list -->
 			<div class="list">
-				<!-- details -->
-				<table class="details">
-					<tr>
-						<td>Дата:</td>
-						<td>16 октября, 19:00</td>
-					</tr>
-					<tr>
-						<td>Место:</td>
-						<td><a class="js-link-anchor" href="#map">Музей изобразительных искусств</a></td>
-					</tr>
-					<tr>
-						<td>Цена:</td>
-						<td>1 000 — 2 400 руб.</td>
-					</tr>
-				</table>
 				<!-- banner -->
 				<div class="banner">
 					<a href="#">
@@ -239,12 +239,14 @@
 				</div>
 			</div>
 			<!-- title -->
-			<div class="title title_small title_red">
+			<div class="title title_small">
 				<div class="title__cell"><div class="icon icon-marker"></div></div>
 				<div class="title__cell">Расположение</div>
 			</div>
 			<!-- map -->
-			<div id="map" class="map" style="width: 440px; height: 285px;"></div>
+			<div class="map-single">
+				<div id="map" style="width: 440px; height: 285px;"></div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -274,7 +276,7 @@
       .add(new ymaps.Placemark([55.76, 37.64], {
         balloonContent: ''
       }, {
-        iconColor: '#a5260a'
+        iconColor: '#d62828'
       }))
 	}
 </script>
