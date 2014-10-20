@@ -16,7 +16,6 @@ head.ready(function() {
 			types = $('.js-types'),
 			types_title = types.find('.types__title'),
 			types_in = types.find('.types__in'),
-			link_anchor = $('.js-link-anchor'),
 			dp = $('.js-dp'),
 			dp_close = dp.find('.dp__close'),
 			btn_dp = $('.js-btn-dp'),
@@ -53,6 +52,7 @@ head.ready(function() {
 			types_item_size();
 		}, 600);
 	});
+
 	// select
 	search_select.on('change', function(){
 		var option_selected = $(this).find('option:selected'),
@@ -110,16 +110,6 @@ head.ready(function() {
 			$(this).addClass('is-active');
 			$(this).next().slideDown();
 		}
-	});
-
-	// anchor
-	link_anchor.on('click', function () {
-		var id = $(this).attr('href'),
-				id_top = $(id).offset().top,
-				header_height = 74,
-				pos_top = id_top - header_height;
-		container.animate({scrollTop : pos_top}, 400);
-		return false;
 	});
 
 	// datepicker
