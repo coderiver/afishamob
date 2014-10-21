@@ -44,6 +44,15 @@ head.ready(function() {
 		btn_projects.trigger('click');
 	});
 
+	// touch
+	$('.touch body').swipe({
+	  swipeLeft: function(event, direction, distance, duration, fingerCount) {
+	  	menu.removeClass('is-open');
+	  	projects.removeClass('is-open');
+	  	container.removeClass('is-moved-menu is-moved-projects');
+	  }
+	});
+
 	// search
 	btn_search.on('click', function () {
 		btn_search.toggleClass('is-active');
