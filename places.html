@@ -315,7 +315,6 @@
       scrollZoomSpeed: 0,
       dblClickZoomDuration: 0
     });
-    myMap.behaviors.disable(['default', 'drag', 'dblClickZoom', 'multiTouch', 'scrollZoom']);
     // Перебираем в цикле точки, которые надо добавить на карту
     for (i = 0; i < points.length; i++ ){
       var myPlacemark = new ymaps.Placemark([
