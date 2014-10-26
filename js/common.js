@@ -188,6 +188,8 @@ head.ready(function() {
  			infinite: true,
  			slidesToShow: 2,
  			slidesToScroll: 1,
+			swipeToSlide: true,
+			touchThreshold: 100,
  			slide: '.slider__item',
  			onInit: function() {
  				slider_all.text(slider_length);
