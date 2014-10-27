@@ -171,9 +171,8 @@
 							<option value="">в этом месяце</option>
 						</select>
 					</div>
-					<div class="search__word">чем-нибудь</div>
 					<div class="search__select">
-						<div class="search__select-head">заняться</div>
+						<div class="search__select-head">чем-нибудь заняться</div>
 						<select class="search__select-list">
 							<option value="">чем-нибудь заняться</option>
 							<option value="">отправиться на шоппинг</option>
@@ -212,7 +211,6 @@
 				<div class="item item_big">
 					<a class="item__pic" href="#">
 						<img src="http://placehold.it/440x290" alt="">
-						<span class="item__counter">27 фото</span>
 					</a>
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
@@ -230,7 +228,6 @@
 				<div class="item item_big">
 					<a class="item__pic" href="#">
 						<img src="http://placehold.it/440x290" alt="">
-						<span class="item__counter">27 фото</span>
 					</a>
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
@@ -242,7 +239,6 @@
 				<div class="item item_big">
 					<a class="item__pic" href="#">
 						<img src="http://placehold.it/440x290" alt="">
-						<span class="item__counter">27 фото</span>
 					</a>
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
@@ -260,7 +256,6 @@
 				<div class="item item_big">
 					<a class="item__pic" href="#">
 						<img src="http://placehold.it/440x290" alt="">
-						<span class="item__counter">27 фото</span>
 					</a>
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
@@ -272,7 +267,6 @@
 				<div class="item item_big">
 					<a class="item__pic" href="#">
 						<img src="http://placehold.it/440x290" alt="">
-						<span class="item__counter">27 фото</span>
 					</a>
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
@@ -322,7 +316,16 @@
       ], {
         balloonContent: ''
       }, {
-        iconColor: '#00b46e'
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: 'img/marker-green.png',
+        // Размеры метки.
+        iconImageSize: [31, 41],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-15, -41]
       });
       // Не забываем добавить точку в коллекцию -
       //  впоследствии мы добавим всю коллекцию на карту

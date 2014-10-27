@@ -180,9 +180,8 @@
 							<option value="">в этом месяце</option>
 						</select>
 					</div>
-					<div class="search__word">чем-нибудь</div>
 					<div class="search__select">
-						<div class="search__select-head">заняться</div>
+						<div class="search__select-head">чем-нибудь заняться</div>
 						<select class="search__select-list">
 							<option value="">чем-нибудь заняться</option>
 							<option value="">отправиться на шоппинг</option>
@@ -327,7 +326,7 @@
 			</div>
 			<!-- map -->
 			<div class="map-single">
-				<div id="map" style="width: 440px; height: 285px; border: 1px solid red;"></div>
+				<div id="map" style="width: 440px; height: 285px;"></div>
 			</div>
 		</div>
 	</div>
@@ -357,7 +356,16 @@
       .add(new ymaps.Placemark([55.76, 37.64], {
         balloonContent: ''
       }, {
-        iconColor: '#00b46e'
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: 'img/marker-green.png',
+        // Размеры метки.
+        iconImageSize: [31, 41],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-15, -41]
       }))
 	}
 </script>
