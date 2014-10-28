@@ -229,16 +229,16 @@ button, input, textarea { font-family: "PT Sans", Arial, sans-serif; font-size: 
 .item:after { content: " "; display: table; clear: both; }
 .item.item_big .item__pic { display: block; float: none; margin: 0 0 20px; }
 .item.item_movie .item__pic { margin-right: 10px; }
-.item.item_red .item__date, .item.item_red .item__map, .item.item_red .item__rating { color: #d62828; }
-.item.item_red .item__date a, .item.item_red .item__map a, .item.item_red .item__rating a { color: #d62828; }
+.item.item_red .item__date, .item.item_red .item__map, .item.item_red .item__rating, .item.item_red .item__title, .item.item_red .item__text { color: #d62828; }
+.item.item_red .item__date a, .item.item_red .item__map a, .item.item_red .item__rating a, .item.item_red .item__title a, .item.item_red .item__text a { color: #d62828; }
 .item.item_red .item__counter, .item.item_red .item__pager, .item.item_red .item__category { background: #d62828; }
 .item.item_red .item__params span { color: #d62828; }
-.item.item_green .item__date, .item.item_green .item__map, .item.item_green .item__rating { color: #00b46e; }
-.item.item_green .item__date a, .item.item_green .item__map a, .item.item_green .item__rating a { color: #00b46e; }
+.item.item_green .item__date, .item.item_green .item__map, .item.item_green .item__rating, .item.item_green .item__title, .item.item_green .item__text { color: #00b46e; }
+.item.item_green .item__date a, .item.item_green .item__map a, .item.item_green .item__rating a, .item.item_green .item__title a, .item.item_green .item__text a { color: #00b46e; }
 .item.item_green .item__counter, .item.item_green .item__pager, .item.item_green .item__category { background: #00b46e; }
 .item.item_green .item__params span { color: #00b46e; }
-.item.item_blue .item__date, .item.item_blue .item__map, .item.item_blue .item__rating { color: #008bf0; }
-.item.item_blue .item__date a, .item.item_blue .item__map a, .item.item_blue .item__rating a { color: #008bf0; }
+.item.item_blue .item__date, .item.item_blue .item__map, .item.item_blue .item__rating, .item.item_blue .item__title, .item.item_blue .item__text { color: #008bf0; }
+.item.item_blue .item__date a, .item.item_blue .item__map a, .item.item_blue .item__rating a, .item.item_blue .item__title a, .item.item_blue .item__text a { color: #008bf0; }
 .item.item_blue .item__counter, .item.item_blue .item__pager, .item.item_blue .item__category { background: #008bf0; }
 .item.item_blue .item__params span { color: #008bf0; }
 .item .item__pic { position: relative; float: left; max-width: 440px; margin-right: 20px; font-size: 0; }
