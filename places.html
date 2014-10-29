@@ -215,7 +215,7 @@
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
 						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
-						<div class="item__map"><i class="icon icon-marker"></i>Музей изобразительных исскуств</div>
+						<div class="item__map"><i class="icon icon-marker"></i><span>Музей изобразительных исскуств</span></div>
 					</div>
 				</div>
 				<!-- banner -->
@@ -232,7 +232,7 @@
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
 						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
-						<div class="item__map"><i class="icon icon-marker"></i>Музей изобразительных исскуств</div>
+						<div class="item__map"><i class="icon icon-marker"></i><span>Музей изобразительных исскуств</span></div>
 					</div>
 				</div>
 				<!-- item -->
@@ -243,7 +243,7 @@
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
 						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
-						<div class="item__map"><i class="icon icon-marker"></i>Музей изобразительных исскуств</div>
+						<div class="item__map"><i class="icon icon-marker"></i><span>Музей изобразительных исскуств</span></div>
 					</div>
 				</div>
 				<!-- banner -->
@@ -260,7 +260,7 @@
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
 						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
-						<div class="item__map"><i class="icon icon-marker"></i>Музей изобразительных исскуств</div>
+						<div class="item__map"><i class="icon icon-marker"></i><span>Музей изобразительных исскуств</span></div>
 					</div>
 				</div>
 				<!-- item -->
@@ -271,7 +271,7 @@
 					<div class="item__in">
 						<div class="item__title"><a href="#">Мотофестиваль «Полный газ»</a></div>
 						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
-						<div class="item__map"><i class="icon icon-marker"></i>Музей изобразительных исскуств</div>
+						<div class="item__map"><i class="icon icon-marker"></i><span>Музей изобразительных исскуств</span></div>
 					</div>
 				</div>
 			</div>
@@ -314,10 +314,17 @@
       var myPlacemark = new ymaps.Placemark([
         points[i][0], points[i][1]
       ], {
-        balloonContent: ''
+        balloonContent: '<div class="marker">'+
+        								  '<div class="marker__head">'+
+        								    '<i class="icon icon-music"></i>'+
+        								    '<div class="marker__title">Планета Кино (Променад-3)</div>'+
+        								  '</div>'+
+        								  '<div class="marker__address">просп. Ленина, 59а, а, ТРК Променад-3</div>'+
+        								'</div>'
       }, {
         // Опции.
         // Необходимо указать данный тип макета.
+        iconShadow: true,
         iconLayout: 'default#image',
         // Своё изображение иконки метки.
         iconImageHref: 'img/marker-green.png',
