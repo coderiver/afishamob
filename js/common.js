@@ -156,6 +156,13 @@ head.ready(function() {
  		body.removeClass('no-scroll');
  		dp.slideUp();
  	});
+ 	body.on('scroll touchmove mousewheel', function(e){
+ 	  if (body.hasClass('no-scroll')) {
+ 	  	e.preventDefault();
+ 	  	e.stopPropagation();
+ 	  	return false;
+ 	  };
+ 	})
 
  	// toggle text
  	text_toggle.on('click', function () {

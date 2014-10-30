@@ -90,7 +90,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 .icon-cancel:before { content: "\e81f"; }
 
 body { min-width: 480px; font-family: "PT Sans", Arial, sans-serif; font-size: 23px; line-height: 1.3; color: #1e1919; overflow-x: hidden; }
-body.no-scroll { overflow: hidden; }
+body.no-scroll { -webkit-overflow-scrolling: none; overflow: hidden; }
 body.is-fucking-opera .menu, body.is-fucking-opera .projects { display: none; position: absolute; bottom: auto; min-height: 100%; -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0); }
 body.is-fucking-opera .menu.is-open, body.is-fucking-opera .projects.is-open { display: block; }
 body.is-fucking-opera .container:after { display: none; }
