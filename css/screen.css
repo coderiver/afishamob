@@ -153,7 +153,7 @@ button, input, textarea { font-family: "PT Sans", Arial, sans-serif; font-size: 
 .btn-menu.is-active i { border-color: black; }
 .btn-menu.is-active i:before, .btn-menu.is-active i:after { background: black; }
 .btn-menu i { display: inline-block; width: 28px; border-top: 3px solid white; vertical-align: middle; }
-.btn-menu i:before, .btn-menu i:after { content: ""; display: inline-block; width: 28px; height: 3px; margin-top: 7px; background: white; vertical-align: top; }
+.btn-menu i:before, .btn-menu i:after { content: ""; display: block; width: 28px; height: 3px; margin-top: 7px; background: white; }
 
 .btn-search { float: right; width: 50px; height: 50px; margin-left: 15px; background: #4e4c4c; border-radius: 4px; }
 .btn-search.is-active { background: #e5e5e5; }
