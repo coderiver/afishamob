@@ -17,6 +17,8 @@ head.ready(function() {
 			types_title = types.find('.types__title'),
 			types_in = types.find('.types__in'),
 			dp = $('.js-dp'),
+			dp_el = dp.find('.dp__el'),
+			dp_in = dp.find('.dp__in'),
 			dp_close = dp.find('.dp__close'),
 			btn_dp = $('.js-btn-dp'),
 			text_toggle = $('.js-text-toggle'),
@@ -141,28 +143,33 @@ head.ready(function() {
  		}; 
  		$.datepicker.setDefaults($.datepicker.regional['ru']);
  		var this_btn = $(this);
- 		dp.datepicker({
+ 		dp_el.datepicker({
  			dateFormat: 'd M',
  			onSelect: function(date) {
  				this_btn.text(date);
  				body.removeClass('no-scroll');
- 				dp.slideUp();
+ 				dp_in.slideUp(400, function () {
+ 					dp.hide();	
+ 				});
  			}
  		});
  		body.addClass('no-scroll');
- 		dp.slideDown();
+ 		dp.show();
+ 		dp_in.slideDown();
  	});
  	dp_close.on('click', function () {
  		body.removeClass('no-scroll');
- 		dp.slideUp();
+ 		dp_in.slideUp(400, function () {
+ 			dp.hide();	
+ 		});
  	});
- 	body.on('scroll touchmove mousewheel', function(e){
- 	  if (body.hasClass('no-scroll')) {
- 	  	e.preventDefault();
- 	  	e.stopPropagation();
- 	  	return false;
- 	  };
- 	})
+ 	//body.on('scroll touchmove mousewheel', function(e){
+ 	//  if (body.hasClass('no-scroll')) {
+ 	//  	e.preventDefault();
+ 	//  	e.stopPropagation();
+ 	//  	return false;
+ 	//  };
+ 	//})
 
  	// toggle text
  	text_toggle.on('click', function () {
