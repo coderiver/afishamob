@@ -899,6 +899,27 @@ button, input, textarea
 .footer
 	padding: 30px 20px 20px
 	background: #f3f3f3
+	.footer__projects
+		margin-bottom: 15px
+		a
+			display: block
+			padding: 0 15px
+			background: $bluel
+			border-radius: 4px  
+			overflow: hidden
+			span
+				float: left
+				+fn
+				font-size: 20px
+				color: #FFF 
+				line-height: 55px
+			i
+				float: right
+				margin-top: 13px
+				+svg(a42-no-bg,101,29)
+	.footer__down
+		+clr
+		
 
 .enter
 	margin-bottom: 20px
@@ -913,10 +934,6 @@ button, input, textarea
 		&:first-child
 			margin-right: 20px
 
-.footer__info
-	margin-bottom: 15px
-	+clr
-
 .logo-a42-small
 	float: left
 	padding-top: 1px
@@ -924,12 +941,14 @@ button, input, textarea
 	img
 		width: 104px
 
-.sixteenplus
+.sixteen
 	float: right
+	margin-left: 10px
 	+fn
 	font-size: 25px
 
 .copyright
+	display: table
 	margin-bottom: 20px
 	font-size: 16px
 	color: #727272 
