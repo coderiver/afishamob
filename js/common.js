@@ -41,6 +41,7 @@ head.ready(function() {
 		container.removeClass('is-moved-menu');
 		container.toggleClass('is-moved-projects');
 		projects.toggleClass('is-open');
+		return false;
 	});
 	projects_close.on('click', function () {
 		btn_projects.trigger('click');
