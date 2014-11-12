@@ -152,22 +152,18 @@ body
 		-webkit-overflow-scrolling: none
 		overflow: hidden
 	&.is-fucking-opera
-		// .icon
-		// 	display: none
+		.dp
+			position: absolute
 		.menu, .projects
 			display: none
 			position: absolute
 			bottom: auto
 			min-height: 100%
-			+transform(translateX(0))
 			&.is-open
 				display: block
 		.container
 			&:after
 				display: none
-			&.is-moved-menu,
-			&.is-moved-projects
-				+transform(translateX(0) translate3d(0,0,0))
 a
 	text-decoration: none
 	color: $cl 
@@ -312,7 +308,7 @@ button, input, textarea
 	padding: 12px 20px
 	background: #000 
 	+clr
-	z-index: 99 
+	z-index: 99
 
 .btn-menu
 	float: left
@@ -385,11 +381,9 @@ button, input, textarea
 	&.is-moved-menu
 		&:after
 			left: 310px
-		//+transform(translateX(310px) translate3d(0,0,0))
 	&.is-moved-projects
 		&:after
 			left: 480px
-		//+transform(translateX(480px) translate3d(0,0,0))
 	&:after
 		content: ""
 		position: absolute
@@ -723,15 +717,15 @@ button, input, textarea
 	left: 0
 	bottom: 0
 	background: #f3f3f3
-	+tr(transform .4s)
+	+tr(left .4s)
 	overflow: auto
 	-webkit-overflow-scrolling: touch
 	&.is-open
-		+transform(translateX(0px) translate3d(0,0,0))
+		left: 0
 		
 .menu
 	width: 310px
-	+transform(translateX(-310px))
+	left: -310px
 	z-index: 997
 	.menu__in
 		background: #FFF 
@@ -848,7 +842,7 @@ button, input, textarea
 
 .projects
 	width: 480px
-	+transform(translateX(-480px))
+	left: -480px
 	z-index: 998
 	.projects__head
 		padding: 12px 20px 12px 80px
