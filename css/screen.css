@@ -398,7 +398,7 @@ button, input, textarea { font-family: "PT Sans", Arial, sans-serif; font-size: 
 .map .map__in { height: 170px; margin-bottom: 10px; overflow: hidden; }
 
 .map-single { position: relative; margin-bottom: 30px; }
-.map-single .map-single__anchor { position: absolute; top: -74px; }
+.map-single .map-single__anchor { position: absolute; top: -125px; }
 
 .marker .marker__head { *zoom: 1; }
 .marker .marker__head:after { content: " "; display: table; clear: both; }
