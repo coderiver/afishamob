@@ -142,7 +142,6 @@ $cl: #1e1919
 	content: '\e81f'
 
 body
-	min-width: 480px
 	+f
 	font-size: 23px 
 	line-height: 1.3
@@ -675,21 +674,23 @@ button, input, textarea
 			margin: 20px -20px
 		& + .item__text
 			margin-top: 10px
-		.icon, span
-			float: left
+		span
+			display: table-cell
+			vertical-align: middle
+			&:first-child
+				padding-right: 5px
 		.icon
-			margin-right: 5px
+			position: relative
+			top: -1px
+			font-size: 12px
 	.item__date
 		& + .item__map
 			margin-top: 10px
-		.icon
-			margin-top: 3px
-			font-size: 12px
 	.item__map
 		& + .item__date
 			margin-top: 10px
 		.icon
-			margin-top: 1px
+			font-size: 16px
 	.item__params
 		font-size: 16px
 		line-height: 2
