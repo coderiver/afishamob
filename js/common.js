@@ -32,19 +32,31 @@ head.ready(function() {
 		container.removeClass('is-moved-projects');
 		container.toggleClass('is-moved-menu');
 		menu.toggleClass('is-open');
+		// 
+		if (!body.hasClass('no-scroll')) {
+			var scroll_top = body.scrollTop();
+			body.addClass('no-scroll');
+			body.css('top', -scroll_top);
+		}
+		else {
+			var pos_top = body.position().top,
+					pos_top = -pos_top;
+			body.css('top', 0);
+			body.removeClass('no-scroll');
+			body.scrollTop(pos_top);
+		}
 	});
+
 
 	// projects		
 	btn_projects.on('click', function () {
-		btn_projects.toggleClass('is-active');
-		menu.removeClass('is-open');
-		container.removeClass('is-moved-menu');
-		container.toggleClass('is-moved-projects');
-		projects.toggleClass('is-open');
+		container.addClass('is-moved-projects');
+		projects.addClass('is-open');
 		return false;
 	});
 	projects_close.on('click', function () {
-		btn_projects.trigger('click');
+		container.removeClass('is-moved-projects');
+		projects.removeClass('is-open');
 	});
 
 	// touch
@@ -143,7 +155,8 @@ head.ready(function() {
  			isRTL: false
  		}; 
  		$.datepicker.setDefaults($.datepicker.regional['ru']);
- 		var this_btn = $(this);
+ 		var this_btn = $(this),
+ 				top = body.scrollTop();
  		dp_el.datepicker({
  			dateFormat: 'd M',
  			onSelect: function(date) {
@@ -154,12 +167,11 @@ head.ready(function() {
  				});
  			}
  		});
- 		body.addClass('no-scroll');
+ 		dp.css('top', top + 74);
  		dp.show();
  		dp_in.slideDown();
  	});
  	dp_close.on('click', function () {
- 		body.removeClass('no-scroll');
  		dp_in.slideUp(400, function () {
  			dp.hide();	
  		});
