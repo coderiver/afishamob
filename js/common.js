@@ -259,5 +259,9 @@ head.ready(function() {
  	if (navigator.userAgent.match(/Opera Mobi/i)) {
  		body.addClass('is-fucking-opera');
  	};
+ 	// ff
+ 	if (navigator.userAgent.match(/Firefox/)) {
+ 		//document.getElementById('viewport').setAttribute('content', 'width=480, user-scalable=yes');
+ 	};
 
 });
