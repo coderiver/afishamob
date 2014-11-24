@@ -110,8 +110,8 @@ button, input, textarea { font-family: "PT Sans", Arial, sans-serif; font-size: 
 .wrapper.wrapper_red .ui-datepicker-calendar thead th { border-bottom: 5px solid #d62828; }
 .wrapper.wrapper_red .ui-datepicker-today .ui-state-default { border-color: #d62828; color: #a70b0b; }
 .wrapper.wrapper_red .ui-datepicker-current-day .ui-state-default { border-color: #d62828; background: #d62828; color: white; }
-.wrapper.wrapper_red .tabs a { border-color: #d62828; }
-.wrapper.wrapper_red .tabs a.is-active { background: #d62828; }
+.wrapper.wrapper_red .tabs button { border-color: #d62828; }
+.wrapper.wrapper_red .tabs button.is-active { background: #d62828; }
 .wrapper.wrapper_red .btn-trailer { border: 1px solid #d62828; }
 .wrapper.wrapper_red .btn-trailer:before { border-color: transparent transparent transparent #d62828; }
 .wrapper.wrapper_red .marker__head .icon { color: #d62828; }
@@ -124,8 +124,8 @@ button, input, textarea { font-family: "PT Sans", Arial, sans-serif; font-size: 
 .wrapper.wrapper_green .ui-datepicker-calendar thead th { border-bottom: 5px solid #00b46e; }
 .wrapper.wrapper_green .ui-datepicker-today .ui-state-default { border-color: #00b46e; color: #00b46e; }
 .wrapper.wrapper_green .ui-datepicker-current-day .ui-state-default { border-color: #00b46e; background: #00b46e; color: white; }
-.wrapper.wrapper_green .tabs a { border-color: #00b46e; }
-.wrapper.wrapper_green .tabs a.is-active { background: #00b46e; }
+.wrapper.wrapper_green .tabs button { border-color: #00b46e; }
+.wrapper.wrapper_green .tabs button.is-active { background: #00b46e; }
 .wrapper.wrapper_green .btn-trailer { border: 1px solid #00b46e; }
 .wrapper.wrapper_green .btn-trailer:before { border-color: transparent transparent transparent #00b46e; }
 .wrapper.wrapper_green .marker__head .icon { color: #00b46e; }
@@ -138,8 +138,8 @@ button, input, textarea { font-family: "PT Sans", Arial, sans-serif; font-size: 
 .wrapper.wrapper_blue .ui-datepicker-calendar thead th { border-bottom: 5px solid #008bf0; }
 .wrapper.wrapper_blue .ui-datepicker-today .ui-state-default { border-color: #008bf0; color: #008bf0; }
 .wrapper.wrapper_blue .ui-datepicker-current-day .ui-state-default { border-color: #008bf0; background: #008bf0; color: white; }
-.wrapper.wrapper_blue .tabs a { border-color: #008bf0; }
-.wrapper.wrapper_blue .tabs a.is-active { background: #008bf0; }
+.wrapper.wrapper_blue .tabs button { border-color: #008bf0; }
+.wrapper.wrapper_blue .tabs button.is-active { background: #008bf0; }
 .wrapper.wrapper_blue .btn-trailer { border: 1px solid #008bf0; }
 .wrapper.wrapper_blue .btn-trailer:before { border-color: transparent transparent transparent #008bf0; }
 .wrapper.wrapper_blue .marker__head .icon { color: #008bf0; }
@@ -371,9 +371,9 @@ button, input, textarea { font-family: "PT Sans", Arial, sans-serif; font-size: 
 
 .tabs { margin-bottom: 30px; *zoom: 1; }
 .tabs:after { content: " "; display: table; clear: both; }
-.tabs a { float: left; margin-right: -1px; padding: 5px 12px; border: 1px solid black; font-family: "PT Sans Narrow", Arial, sans-serif; font-size: 23px; font-weight: 700; }
-.tabs a span { position: relative; top: -2px; padding-left: 20px; font-family: "PT Sans", Arial, sans-serif; font-size: 16px; font-weight: 400; }
-.tabs a.is-active { background: black; color: white; }
+.tabs button { float: left; margin-right: -1px; padding: 5px 12px; border: 1px solid black; font-family: "PT Sans Narrow", Arial, sans-serif; font-size: 23px; font-weight: 700; }
+.tabs button span { position: relative; top: -2px; padding-left: 20px; font-family: "PT Sans", Arial, sans-serif; font-size: 16px; font-weight: 400; }
+.tabs button.is-active { background: black; color: white; }
 
 .btn-trailer { position: relative; padding: 4px 15px 4px 35px; margin-bottom: 40px; font-family: "PT Sans Narrow", Arial, sans-serif; font-size: 23px; font-weight: 700; overflow: visible; }
 .btn-trailer:before { content: ""; position: absolute; left: 15px; top: 11px; width: 0px; height: 0px; border-style: solid; border-width: 7px 0 7px 10px; }
