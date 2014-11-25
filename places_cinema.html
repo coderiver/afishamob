@@ -3,9 +3,21 @@
 <head>
 	<meta charset="utf-8">
 	<title>Template</title>
-	<meta name="viewport" content="maximum-scale=1.0,width=480,height=device-height,user-scalable=no"/>
 	<link rel="stylesheet" media="all" href="css/screen.css">
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script>
+		// viewport for firefox (Android) and another mobile browsers
+		var ua = navigator.userAgent.toLowerCase();
+		var is_android = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+		var is_firefox = ua.indexOf('firefox') > -1;
+		if (is_firefox && is_android) {
+			// alert ('FF');
+			document.write('<meta name="viewport" content="width=480, user-scalable=yes">');
+		} else {
+			// alert ('NoFF');
+			document.write('<meta name="viewport" content="width=480, user-scalable=no">');
+		}
+	</script>
 </head>
 <body>
 <!-- wrapper -->
