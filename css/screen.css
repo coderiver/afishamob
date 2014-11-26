@@ -121,6 +121,8 @@ button, input, textarea { font-family: "PT Sans", Arial, sans-serif; font-size: 
 .wrapper.wrapper_green .item__params span { color: #00b46e; }
 .wrapper.wrapper_green .details td:first-child { color: #00b46e; }
 .wrapper.wrapper_green .dp__title { color: #00b46e; }
+.wrapper.wrapper_green .ui-datepicker-prev { background: url("../img/svg/dp-left-green.svg") no-repeat 0 0; -moz-background-size: 30px 30px 100%; -webkit-background-size: 30px 30px 100%; background-size: 30px 30px 100%; width: 30px; height: 30px; display: inline-block; }
+.wrapper.wrapper_green .ui-datepicker-next { background: url("../img/svg/dp-right-green.svg") no-repeat 0 0; -moz-background-size: 30px 30px 100%; -webkit-background-size: 30px 30px 100%; background-size: 30px 30px 100%; width: 30px; height: 30px; display: inline-block; }
 .wrapper.wrapper_green .ui-datepicker-calendar thead th { border-bottom: 5px solid #00b46e; }
 .wrapper.wrapper_green .ui-datepicker-today .ui-state-default { border-color: #00b46e; color: #00b46e; }
 .wrapper.wrapper_green .ui-datepicker-current-day .ui-state-default { border-color: #00b46e; background: #00b46e; color: white; }
