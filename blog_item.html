@@ -12,7 +12,7 @@
 		var is_firefox = ua.indexOf('firefox') > -1;
 		if (is_firefox && is_android) {
 			// alert ('FF');
-			document.write('<meta name="viewport" content="width=480, user-scalable=yes">');
+			document.write('<meta name="viewport" content="width=480, initial-scale=.66, maximum-scale=.66, user-scalable=no">');
 		} else {
 			// alert ('NoFF');
 			document.write('<meta name="viewport" content="width=480, user-scalable=no">');
@@ -210,7 +210,7 @@
 				<!-- item -->
 				<div class="item item_big">
 					<div class="item__in">
-						<div class="item__date"><i class="icon icon-check"></i><span>16 октября 2014</span></div>
+						<div class="item__date"><span><i class="icon icon-check"></i></span><span>16 октября 2014</span></div>
 						<div class="item__text">Хотите увидеть темную сторону Луны? А поближе рассмотреть Млечный путь? В планетариях вам расскажут о том, что такое черные дыры и дадут мощный телескоп, чтобы вы могли познакомиться со звездами поближе. Оснащенные всем необходимым для путешествия к запредельным реальностям планетарии ждут своих посетителей по всему миру.</div>
 					</div>
 				</div>
