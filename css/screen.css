@@ -372,7 +372,7 @@ button, input, textarea { font-family: "PT Sans", Arial, sans-serif; font-size: 
 .ymaps-2-1-16-copyright { display: none !important; }
 
 .tabs { margin-bottom: 30px; font-size: 0; }
-.tabs a { display: inline-block; padding: 5px 12px; box-shadow: 0 0 0 1px black; font-family: "PT Sans Narrow", Arial, sans-serif; font-size: 23px; font-weight: 700; vertical-align: top; }
+.tabs a { display: inline-block; padding: 5px 12px; margin-right: -1px; background: white; box-shadow: 0 0 0 1px black; font-family: "PT Sans Narrow", Arial, sans-serif; font-size: 23px; font-weight: 700; vertical-align: top; }
 .tabs a span { position: relative; top: -2px; padding-left: 20px; font-family: "PT Sans", Arial, sans-serif; font-size: 16px; font-weight: 400; }
 .tabs a.is-active { background: black; color: white; }
 
