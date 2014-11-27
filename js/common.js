@@ -48,7 +48,9 @@ head.ready(function() {
 		}
 	});
 	$(document).on('click', function () {
-		btn_menu.trigger('click');
+		if (container.hasClass('is-moved-menu')) {
+			btn_menu.trigger('click');
+		};
 	});
 	menu.on('click', function (event) {
 		event.stopPropagation();
