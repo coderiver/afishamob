@@ -26,7 +26,8 @@ head.ready(function() {
 			body = $('body');
 
 	// menu		
-	btn_menu.on('click', function () {
+	btn_menu.on('click', function (event) {
+		event.stopPropagation();
 		btn_menu.toggleClass('is-active');
 		projects.removeClass('is-open');
 		container.removeClass('is-moved-projects');
@@ -46,7 +47,12 @@ head.ready(function() {
 			body.scrollTop(pos_top);
 		}
 	});
-
+	$(document).on('click', function () {
+		btn_menu.trigger('click');
+	});
+	menu.on('click', function (event) {
+		event.stopPropagation();
+	});
 
 	// projects		
 	btn_projects.on('click', function () {
