@@ -147,10 +147,6 @@ body
 	line-height: 1.3
 	color: $cl
 	overflow-x: hidden
-	&.no-scroll
-		position: fixed
-		left: 0
-		width: 100%
 	&.is-fucking-opera
 		.menu, .projects
 			display: none
@@ -370,7 +366,10 @@ button, input, textarea
 body
 	&.is-moved-menu,
 	&.is-moved-projects
-		overflow: hidden
+		.wrapper
+			overflow: hidden
+			height: 100%
+			width: 100%
 		.overlay
 			visibility: visible
 			+transition-delay(.4s)
