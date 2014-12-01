@@ -717,10 +717,10 @@ button, input, textarea
 	position: fixed
 	top: 74px
 	left: 0
-	bottom: 0
+	bottom: -72px
 	background: #f3f3f3
 	+tr(left .4s)
-	overflow: auto
+	overflow: hidden
 	-webkit-overflow-scrolling: touch
 	&.is-open
 		left: 0
@@ -729,6 +729,10 @@ button, input, textarea
 	width: 310px
 	left: -310px
 	z-index: 997
+	&__inner
+		height: 100%
+		overflow: auto
+		padding: 0 0 94px 
 	.menu__in
 		background: #FFF 
 	.menu__item
@@ -846,6 +850,10 @@ button, input, textarea
 	width: 480px
 	left: -480px
 	z-index: 998
+	&__inner
+		height: 100%
+		overflow: auto
+		padding: 0 0 94px 
 	.projects__head
 		padding: 12px 20px 12px 80px
 		+clr
@@ -948,15 +956,16 @@ button, input, textarea
 	margin-bottom: 20px
 	font-size: 16px
 	color: #727272 
+	position: relative
+	padding: 0 0 0 10px  
+	&:before
+		content: "©"
+		position: absolute
+		top: 1px
+		left: -15px
+		font-size: 14px
 	p
 		position: relative
-		&:first-child
-			&:before
-				content: "©"
-				position: absolute
-				top: 1px
-				left: -15px
-				font-size: 14px
 
 .title
 	display: table
