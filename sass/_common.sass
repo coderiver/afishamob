@@ -367,16 +367,11 @@ button, input, textarea
 	.icon
 		font-size: 50px
 		color: $blue 
-
-.container
-	position: relative
-	padding-top: 74px
-	+tr(transform .4s)
-	z-index: 2 
+body
 	&.is-moved-menu,
 	&.is-moved-projects
 		overflow: hidden
-		&:after
+		.overlay
 			visibility: visible
 			+transition-delay(.4s)
 			opacity: 1 
@@ -386,7 +381,7 @@ button, input, textarea
 	&.is-moved-projects
 		&:after
 			left: 480px
-	&:after
+	.overlay
 		content: ""
 		position: absolute
 		top: 0
@@ -398,6 +393,11 @@ button, input, textarea
 		opacity: 0
 		+tr(opacity .2s) 
 		z-index: 99 
+.container
+	position: relative
+	padding-top: 74px
+	+tr(transform .4s)
+	z-index: 2 
 	.container__in
 		padding: 15px 20px 20px
 
