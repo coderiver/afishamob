@@ -166,7 +166,7 @@ button, input, textarea { font-family: "PT Sans", Arial, sans-serif; font-size: 
 .logo-a42 { float: right; }
 .logo-a42 .icon { font-size: 50px; color: #008bf0; }
 
-body.is-moved-menu .wrapper, body.is-moved-projects .wrapper { overflow: hidden; height: 100%; width: 100%; }
+body.is-moved-menu .wrapper, body.is-moved-projects .wrapper { overflow: hidden; padding-bottom: 74px; background: white; position: relative; top: 0; bottom: -74px; }
 body.is-moved-menu .overlay, body.is-moved-projects .overlay { visibility: visible; -moz-transition-delay: 0.4s; -o-transition-delay: 0.4s; -webkit-transition-delay: 0.4s; transition-delay: 0.4s; opacity: 1; }
 body.is-moved-menu:after { left: 310px; }
 body.is-moved-projects:after { left: 480px; }
