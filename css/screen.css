@@ -314,7 +314,7 @@ body .overlay { content: ""; position: absolute; top: 0; left: 0; right: 0; bott
 .menu .menu__list li { display: table; position: relative; width: 100%; margin-bottom: -1px; table-layout: fixed; }
 .menu .menu__list li:after { content: ""; position: absolute; bottom: 0; left: 10px; right: 10px; height: 1px; background: #00b46e; }
 .menu .menu__list li:last-child:after { display: none; }
-.menu .menu__list a { display: table-row; font-size: 20px; font-weight: 700; line-height: 1; }
+.menu .menu__list a { display: table-row; font-size: 20px; font-weight: 700; line-height: 1; -webkit-tap-highlight-color: transparent; }
 .menu .menu__list a.is-active { background: #00b46e; color: white; }
 .menu .menu__list a.is-active .icon { color: white; }
 .menu .menu__list span { line-height: 60px; vertical-align: middle; overflow: hidden; display: block; }
