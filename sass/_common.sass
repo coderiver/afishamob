@@ -778,7 +778,7 @@ body
 				&:after
 					background: $red 
 			a
-				&:hover, &:active, &.is-active
+				&:active, &.is-active
 					background: $red 
 			.icon
 				color: $red 
@@ -794,7 +794,7 @@ body
 				&:after
 					background: $green 
 			a
-				&:hover, &:active, &.is-active
+				&:active, &.is-active
 					background: $green 
 			.icon
 				color: $green 
@@ -810,7 +810,7 @@ body
 				&:after
 					background: $blue 
 			a
-				&:hover, &:active, &.is-active
+				&:active, &.is-active
 					background: $blue 
 			.icon
 				color: $blue 
@@ -838,18 +838,19 @@ body
 			font-size: 20px
 			font-weight: 700 
 			line-height: 1
-			&:hover, &:active, &.is-active
+			&:active, &.is-active
 				background: $green 
 				color: #fff 
 				.icon
 					color: #fff
 		span
-			display: table-cell
-			height: 60px
+			line-height: 60px
 			vertical-align: middle
+			overflow: hidden
+			display: block
 			&:first-child
+				float: left
 				width: 60px
-				padding: 0 10px 
 				text-align: center
 
 .projects

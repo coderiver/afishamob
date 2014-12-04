@@ -296,29 +296,29 @@ body .overlay { content: ""; position: absolute; top: 0; left: 0; right: 0; bott
 .menu .menu__item_events .menu__title { color: #d62828; }
 .menu .menu__item_events .menu__title.is-active { background: #d62828; color: white; }
 .menu .menu__item_events .menu__list li:after { background: #d62828; }
-.menu .menu__item_events .menu__list a:hover, .menu .menu__item_events .menu__list a:active, .menu .menu__item_events .menu__list a.is-active { background: #d62828; }
+.menu .menu__item_events .menu__list a:active, .menu .menu__item_events .menu__list a.is-active { background: #d62828; }
 .menu .menu__item_events .menu__list .icon { color: #d62828; }
 .menu .menu__item_places { border-color: #00b46e; }
 .menu .menu__item_places .menu__title { color: #00b46e; }
 .menu .menu__item_places .menu__title.is-active { background: #00b46e; color: white; }
 .menu .menu__item_places .menu__list li:after { background: #00b46e; }
-.menu .menu__item_places .menu__list a:hover, .menu .menu__item_places .menu__list a:active, .menu .menu__item_places .menu__list a.is-active { background: #00b46e; }
+.menu .menu__item_places .menu__list a:active, .menu .menu__item_places .menu__list a.is-active { background: #00b46e; }
 .menu .menu__item_places .menu__list .icon { color: #00b46e; }
 .menu .menu__item_cities { border-color: #008bf0; }
 .menu .menu__item_cities .menu__title { color: #008bf0; }
 .menu .menu__item_cities .menu__title.is-active { background: #008bf0; color: white; }
 .menu .menu__item_cities .menu__list li:after { background: #008bf0; }
-.menu .menu__item_cities .menu__list a:hover, .menu .menu__item_cities .menu__list a:active, .menu .menu__item_cities .menu__list a.is-active { background: #008bf0; }
+.menu .menu__item_cities .menu__list a:active, .menu .menu__item_cities .menu__list a.is-active { background: #008bf0; }
 .menu .menu__item_cities .menu__list .icon { color: #008bf0; }
 .menu .menu__list { display: none; }
 .menu .menu__list li { display: table; position: relative; width: 100%; margin-bottom: -1px; table-layout: fixed; }
 .menu .menu__list li:after { content: ""; position: absolute; bottom: 0; left: 10px; right: 10px; height: 1px; background: #00b46e; }
 .menu .menu__list li:last-child:after { display: none; }
 .menu .menu__list a { display: table-row; font-size: 20px; font-weight: 700; line-height: 1; }
-.menu .menu__list a:hover, .menu .menu__list a:active, .menu .menu__list a.is-active { background: #00b46e; color: white; }
-.menu .menu__list a:hover .icon, .menu .menu__list a:active .icon, .menu .menu__list a.is-active .icon { color: white; }
-.menu .menu__list span { display: table-cell; height: 60px; vertical-align: middle; }
-.menu .menu__list span:first-child { width: 60px; padding: 0 10px; text-align: center; }
+.menu .menu__list a:active, .menu .menu__list a.is-active { background: #00b46e; color: white; }
+.menu .menu__list a:active .icon, .menu .menu__list a.is-active .icon { color: white; }
+.menu .menu__list span { line-height: 60px; vertical-align: middle; overflow: hidden; display: block; }
+.menu .menu__list span:first-child { float: left; width: 60px; text-align: center; }
 
 .projects { width: 480px; left: -480px; z-index: 998; }
 .projects__inner { height: 100%; background: #f3f3f3; padding-bottom: 94px; -webkit-overflow-scrolling: touch; overflow: auto; }
