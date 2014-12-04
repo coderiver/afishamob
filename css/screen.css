@@ -339,7 +339,7 @@ body .overlay { content: ""; position: absolute; top: 0; left: 0; right: 0; bott
 .footer { padding: 30px 20px 20px; background: #f3f3f3; }
 .footer .footer__projects { margin-bottom: 15px; }
 .footer .footer__projects a { display: block; padding: 0 15px; background: #00c7ff; border-radius: 4px; overflow: hidden; }
-.footer .footer__projects a span { float: left; font-family: "PT Sans Narrow", Arial, sans-serif; font-size: 20px; color: white; line-height: 55px; }
+.footer .footer__projects a span { float: left; font-family: "PT Sans Narrow", Arial, sans-serif; font-size: 20px; color: white; line-height: 55px; text-transform: uppercase; }
 .footer .footer__projects a i { float: right; margin-top: 13px; background: url("../img/svg/a42-no-bg.svg") no-repeat 0 0; -moz-background-size: 101px 29px 100%; -webkit-background-size: 101px 29px 100%; background-size: 101px 29px 100%; width: 101px; height: 29px; display: inline-block; }
 .footer .footer__down { *zoom: 1; }
 .footer .footer__down:after { content: " "; display: table; clear: both; }
