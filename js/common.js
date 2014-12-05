@@ -1,29 +1,29 @@
 head.ready(function() {
 
 	var btn_menu = $('.js-btn-menu'),
-			btn_search = $('.js-btn-search'),
-			btn_projects = $('.js-btn-projects'),
-			menu = $('.js-menu'),
-			menu_title = menu.find('.menu__title'),
-			menu_list = menu.find('.menu__list'),
-			search = $('.js-search'),
-			search_select = search.find('.search__select'),
-			projects = $('.js-projects'),
-			projects_type = projects.find('.projects__type'),
-			projects_list = projects.find('.projects__list'),
-			projects_close = projects.find('.projects__close'),
-			container = $('.js-container'),
-			types = $('.js-types'),
-			types_title = types.find('.types__title'),
-			types_in = types.find('.types__in'),
-			dp = $('.js-dp'),
-			dp_el = dp.find('.dp__el'),
-			dp_in = dp.find('.dp__in'),
-			dp_close = dp.find('.dp__close'),
-			btn_dp = $('.js-btn-dp'),
-			text_toggle = $('.js-text-toggle'),
-			slider = $('.js-slider'),
-			body = $('body');
+		btn_search = $('.js-btn-search'),
+		btn_projects = $('.js-btn-projects'),
+		menu = $('.js-menu'),
+		menu_title = menu.find('.menu__title'),
+		menu_list = menu.find('.menu__list'),
+		search = $('.js-search'),
+		search_select = search.find('.search__select'),
+		projects = $('.js-projects'),
+		projects_type = projects.find('.projects__type'),
+		projects_list = projects.find('.projects__list'),
+		projects_close = projects.find('.projects__close'),
+		container = $('.js-container'),
+		types = $('.js-types'),
+		types_title = types.find('.types__title'),
+		types_in = types.find('.types__in'),
+		dp = $('.js-dp'),
+		dp_el = dp.find('.dp__el'),
+		dp_in = dp.find('.dp__in'),
+		dp_close = dp.find('.dp__close'),
+		btn_dp = $('.js-btn-dp'),
+		text_toggle = $('.js-text-toggle'),
+		slider = $('.js-slider'),
+		body = $('body');
 
 	// menu		
 	btn_menu.on('click', function (event) {
@@ -85,6 +85,15 @@ head.ready(function() {
 	  	container.removeClass('is-moved-menu is-moved-projects');
 	  }
 	});
+
+	// orientationchange
+	window.addEventListener('orientationchange', function() {
+		$('.menu').removeClass('is-open');
+		$('.projects').removeClass('is-open');
+		btn_menu.removeClass('is-active');
+		container.removeClass('is-moved-projects');
+		container.removeClass('is-moved-menu');
+	 }, false);
 
 	// search
 	btn_search.on('click', function () {
