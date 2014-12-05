@@ -275,7 +275,7 @@ head.ready(function() {
 
  	// opera
  	if (navigator.userAgent.match(/Opera Mobi/i)) {
- 		body.addClass('is-fucking-opera');
+ 		body.addClass('is-opera');
  	};
 
 });
