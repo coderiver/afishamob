@@ -45,7 +45,7 @@ head.ready(function() {
 		if (!body.hasClass('no-scroll')) {
 			var scroll_top = body.scrollTop();
 			body.addClass('no-scroll');
-			body.css('top', -scroll_top);
+			body.css('top', 0);
 		}
 		else {
 			var pos_top = body.position().top,
@@ -286,5 +286,4 @@ head.ready(function() {
  	if (navigator.userAgent.match(/Opera Mobi/i)) {
  		body.addClass('is-opera');
  	};
-
 });

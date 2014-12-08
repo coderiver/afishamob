@@ -370,6 +370,11 @@ body
 	&.is-moved-projects
 		height: 100%
 		overflow: hidden
+		position: fixed
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
 		.wrapper
 			overflow: hidden
 			background: white
@@ -395,7 +400,7 @@ body
 		visibility: hidden
 		opacity: 0
 		+tr(opacity .2s) 
-		z-index: 99 
+		z-index: 99
 .container
 	position: relative
 	padding-top: 74px
@@ -724,7 +729,6 @@ body
 	background: #f3f3f3
 	+tr(left .4s)
 	overflow: hidden
-	-webkit-overflow-scrolling: touch
 	&.is-open
 		left: 0
 		
@@ -738,7 +742,6 @@ body
 		background: #f3f3f3
 		padding-bottom: 94px
 		overflow: auto
-		-webkit-overflow-scrolling: touch
 	.menu__in
 		background: #FFF 
 	.menu__item
