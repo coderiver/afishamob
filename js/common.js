@@ -294,4 +294,13 @@ head.ready(function() {
  	if (navigator.userAgent.match(/Opera Mobi/i)) {
  		body.addClass('is-opera');
  	};
+ 	if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1)
+ 	{
+ 	     body.addClass('is-ff');
+ 	};
+ 	var ua = navigator.userAgent.toLowerCase();
+ 	if(navigator.userAgent.toLowerCase().indexOf("android") > -1)
+ 	{
+ 		body.addClass('is-ff');
+ 	};
 });
