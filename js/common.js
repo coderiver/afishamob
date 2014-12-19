@@ -31,21 +31,22 @@ head.ready(function() {
 		// btn_menu.toggleClass('is-active');
 		projects.removeClass('is-open');
 		container.removeClass('is-moved-projects');
-		container.toggleClass('is-moved-menu');
 		// menu.toggleClass('is-open');
 		// 
 		if (btn_menu.hasClass('is-active')) {
 			btn_menu.removeClass('is-active');
 			menu.removeClass('is-open');
+			container.removeClass('is-moved-menu');	
 		}
 		else {
 			btn_menu.addClass('is-active');
-			menu.addClass('is-open');		
+			menu.addClass('is-open');	
+			container.addClass('is-moved-menu');
 		}
 		if (!body.hasClass('no-scroll')) {
 			var scroll_top = body.scrollTop();
 			body.addClass('no-scroll');
-			body.css('top', 0);
+			body.css('top', -scroll_top);
 		}
 		else {
 			var pos_top = body.position().top,
@@ -68,13 +69,20 @@ head.ready(function() {
 
 	// projects		
 	btn_projects.on('click', function () {
+		btn_projects.toggleClass('is-active');
+		menu.removeClass('is-open');
+		container.removeClass('is-moved-menu');
 		container.addClass('is-moved-projects');
-		projects.addClass('is-open');
-		return false;
+		projects.toggleClass('is-open');
+		// if ($('.js-btn-menu').hasClass('is-active')) {
+		// 	$('.js-btn-menu').removeClass('is-active');
+		// }
 	});
 	projects_close.on('click', function () {
-		container.removeClass('is-moved-projects');
-		projects.removeClass('is-open');
+		// btn_projects.trigger('click');
+		projects.toggleClass('is-open');
+		menu.addClass('is-open');
+		// container.toggleClass('is-moved-projects');
 	});
 
 	// touch

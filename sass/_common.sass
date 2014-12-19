@@ -46,6 +46,10 @@
 // 	+png(blabla)
 // p
 // 	+jpg(bla)
+*
+	-moz-text-size-adjust: none
+	-webkit-text-size-adjust: none
+	text-size-adjust: none
 html, body
 	background: #FFF 
 @import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic)
@@ -858,8 +862,9 @@ body
 				text-align: center
 
 .projects
-	width: 480px
-	left: -480px
+	max-width: 310px
+	width: 100%
+	left: -100%
 	z-index: 998
 	&__inner
 		height: 100%
@@ -868,12 +873,14 @@ body
 		-webkit-overflow-scrolling: touch
 		overflow: auto
 	.projects__head
-		padding: 12px 20px 12px 80px
+		// padding: 12px 20px 12px 80px
+		padding: 12px 20px 12px 30px
 		+clr
 	.projects__title
 		float: left
 		font-size: 35px
 		color: $bluel
+		+fn
 	.projects__close
 		float: right
 		margin-top: 11px
@@ -883,7 +890,8 @@ body
 			color: #D7D7D7 
 	.projects__type
 		position: relative
-		padding: 7px 10px 7px 80px
+		// padding: 7px 10px 7px 80px
+		padding: 7px 10px 7px 40px
 		background: $bluel
 		+fn
 		color: #FFF
@@ -892,12 +900,16 @@ body
 		&.is-active
 			background: #000 
 			.icon
-				top: 12px
+				top: 50%
 				+rotate(180)
+				margin-top: -16px 
 		.icon
 			position: absolute
-			top: 15px
-			left: 40px
+			// top: 15px
+			// left: 40px
+			top: 50%
+			margin-top: -15px
+			left: 10px
 			font-size: 30px
 	.projects__list
 		display: none
@@ -909,7 +921,8 @@ body
 		a
 			display: block
 			margin: 0 -20px
-			padding: 17px 20px 17px 80px
+			// padding: 17px 20px 17px 80px
+			padding: 17px 20px 17px 40px
 			font-size: 20px
 			font-weight: 700 
 			
