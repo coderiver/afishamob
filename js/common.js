@@ -42,7 +42,7 @@ head.ready(function() {
 			btn_menu.addClass('is-active');
 			menu.addClass('is-open');	
 			container.addClass('is-moved-menu');
-		}
+		};
 		if (!body.hasClass('no-scroll')) {
 			var scroll_top = body.scrollTop();
 			body.addClass('no-scroll');
@@ -54,7 +54,8 @@ head.ready(function() {
 			body.css('top', 0);
 			body.removeClass('no-scroll');
 			body.scrollTop(pos_top);
-		}
+		};
+		return false;
 	});
 	$('.overlay').on('click', function () {
 		projects.removeClass('is-open');
