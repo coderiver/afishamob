@@ -298,6 +298,7 @@ head.ready(function() {
  	if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1)
  	{
  	     body.addClass('is-ff');
+ 	     body.addClass('is-fox');
  	};
  	var ua = navigator.userAgent.toLowerCase();
  	if(navigator.userAgent.toLowerCase().indexOf("android") > -1)
