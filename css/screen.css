@@ -25,7 +25,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 * { -moz-text-size-adjust: none; -webkit-text-size-adjust: none; text-size-adjust: none; }
 
-html, body { background: white; min-width: 480px; }
+html, body { background: white; width: 480px; }
 
 @font-face { font-family: "fontello"; src: url("../font/fontello.eot?95040444"); src: url("../font/fontello.eot?95040444#iefix") format("embedded-opentype"), url("../font/fontello.woff?95040444") format("woff"), url("../font/fontello.ttf?95040444") format("truetype"), url("../font/fontello.svg?95040444#fontello") format("svg"); font-weight: normal; font-style: normal; }
 .icon { display: inline-block; line-height: 1; -webkit-font-smoothing: antialiased; }
@@ -238,7 +238,8 @@ body .overlay { content: ""; position: absolute; top: 0; left: 0; right: 0; bott
 .item { margin-bottom: 30px; *zoom: 1; }
 .item:after { content: " "; display: table; clear: both; }
 .item.item_big .item__pic { display: block; float: none; margin: 0 0 20px; }
-.item.item_big .item__in { clear: both; width: 100%; overflow: visible; }
+.item.item_big .item__in { clear: both; width: 440px; overflow: visible; }
+.item.item_big .item__in div { width: 440px; }
 .item.item_movie .item__pic { margin-right: 10px; }
 .item.item_red .item__date, .item.item_red .item__map, .item.item_red .item__rating, .item.item_red .item__title, .item.item_red .item__text { color: #d62828; }
 .item.item_red .item__date a, .item.item_red .item__map a, .item.item_red .item__rating a, .item.item_red .item__title a, .item.item_red .item__text a { color: #d62828; }
@@ -261,6 +262,9 @@ body .overlay { content: ""; position: absolute; top: 0; left: 0; right: 0; bott
 .item .item__previews-in a { display: inline-block; margin: 0 13px 13px 0; vertical-align: top; }
 .item .item__counter { position: absolute; top: 20px; right: 20px; padding: 4px 12px; font-size: 23px; color: white; }
 .item .item__category { position: absolute; top: 0; left: 0; padding: 6px 10px; font-size: 16px; color: white; }
+.item .item__category.is-red { background: #d62828; }
+.item .item__category.is-green { background: #00b46e; }
+.item .item__category.is-blue { background: #008bf0; }
 .item .item__in { overflow: hidden; }
 .item .item__title { margin-bottom: 15px; font-weight: 700; }
 .item .item__rating { margin-bottom: 3px; font-size: 16px; }
@@ -271,7 +275,7 @@ body .overlay { content: ""; position: absolute; top: 0; left: 0; right: 0; bott
 .item .item__date:after, .item .item__map:after { content: " "; display: table; clear: both; }
 .item .item__date + .slider, .item .item__map + .slider { margin: 20px -20px; }
 .item .item__date + .item__text, .item .item__map + .item__text { margin-top: 10px; }
-.item .item__date span, .item .item__map span { display: table-cell; vertical-align: middle; }
+.item .item__date span, .item .item__map span { display: inline-block; vertical-align: middle; }
 .item .item__date span:first-child, .item .item__map span:first-child { padding-right: 5px; }
 .item .item__date .icon, .item .item__map .icon { position: relative; top: -1px; font-size: 12px; }
 .item .item__date + .item__map { margin-top: 10px; }
@@ -390,11 +394,14 @@ body .overlay { content: ""; position: absolute; top: 0; left: 0; right: 0; bott
 .btn-trailer:before { content: ""; position: absolute; left: 15px; top: 11px; width: 0px; height: 0px; border-style: solid; border-width: 7px 0 7px 10px; }
 
 .slider { position: relative; max-width: 420px; margin: 0 -20px 30px; overflow: hidden; }
+.slider.is-carousel .slider__item { width: 210px; }
+.slider.is-carousel .slider__item img { max-width: 100%; }
 .slider .slider__pager { position: absolute; top: 20px; right: 70px; padding: 4px 12px; color: white; z-index: 4; }
 .slider .slider__list { width: 100%; z-index: 2; }
 .slider .slider__item { font-size: 0; }
 .slider .slider__item a { display: block; margin-left: 20px; }
 .slider .slider__caption { background: #008bf0; position: absolute; top: 20px; right: 20px; padding: 4px 12px; color: white; z-index: 9999; }
+.slider .slider__caption.is-red { background: #d62828; }
 
 .schedule { margin-bottom: 30px; border-bottom: 1px solid #c5c5c5; }
 .schedule .schedule__title { margin-bottom: 20px; font-size: 23px; font-weight: 700; }

@@ -54,7 +54,7 @@
     
 html, body
 	background: #FFF 
-	min-width: 480px 
+	width: 480px 
 @import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic)
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic)
 =fn
@@ -606,8 +606,10 @@ body
 			margin: 0 0 20px
 		.item__in
 			clear: both
-			width: 100%
+			width: 440px
 			overflow: visible
+			div
+				width: 440px
 	&.item_movie
 		.item__pic
 			margin-right: 10px
@@ -676,6 +678,12 @@ body
 		padding: 6px 10px
 		font-size: 16px
 		color: #FFF  
+		&.is-red
+			background: #d62828 
+		&.is-green
+			background: #00b46e 
+		&.is-blue
+			background: #008bf0
 	.item__in
 		overflow: hidden
 	.item__title
@@ -700,7 +708,7 @@ body
 		& + .item__text
 			margin-top: 10px
 		span
-			display: table-cell
+			display: inline-block
 			vertical-align: middle
 			&:first-child
 				padding-right: 5px
@@ -1101,6 +1109,11 @@ body
 	max-width: 420px
 	margin: 0 -20px 30px
 	overflow: hidden
+	&.is-carousel
+		.slider__item
+			width: 210px
+			img
+				max-width: 100%
 	.slider__pager
 		position: absolute
 		top: 20px
@@ -1124,6 +1137,8 @@ body
 		padding: 4px 12px
 		color: white
 		z-index: 9999 
+		&.is-red
+			background: #d62828  
 .schedule
 	margin-bottom: 30px
 	border-bottom: 1px solid #c5c5c5 
@@ -1178,7 +1193,6 @@ body
 	.marker__title
 		display: table
 		font-weight: 700 
-
 
 
 .is-ff
