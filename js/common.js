@@ -305,4 +305,15 @@ head.ready(function() {
  	{
  		body.addClass('is-ff');
  	};
+
+ 	//galleries synchronize (ITEM)
+	var slideshows = $('.cycle-slideshow').on('cycle-next cycle-prev', function(e, opts) {
+	  slideshows.not(this).cycle('goto', opts.currSlide);
+	});
+
+	$('.item__pager .slide').click(function() {
+	  var index = $('.item__pager').data('cycle.API').getSlideIndex(this);
+	  console.log(index);
+	  slideshows.cycle('goto', index);
+	});
 });

@@ -428,6 +428,13 @@ body .overlay { content: ""; position: absolute; top: 0; left: 0; right: 0; bott
 
 .is-fox .menu.is-open, .is-fox .projects.is-open { padding-bottom: 74px; }
 
+.item__bot { margin: 0 -5px; }
+
+.item__top .slide { font-size: 0; margin-bottom: 25px; }
+
+.wrapper.wrapper_green .item__bot .item__pager { background: none; }
+.wrapper.wrapper_green .item__bot .slide { text-align: center; font-size: 0; margin-bottom: 13px; }
+
 .slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
 .slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; }

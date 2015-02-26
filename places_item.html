@@ -220,32 +220,59 @@
 				</table>
 				<!-- item -->
 				<div class="item item_big">
+					<!-- BEGIN CAROUSEL -->
 					<div class="item__gallery">
-						<a class="item__pic" href="#">
-							<img src="img/440x290.jpg" alt="">
-						</a>
-						<div class="item__previews">
-							<div class="item__previews-in">
-								<a href="#">
-									<img src="img/100x100.jpg" alt="">
-								</a>
-								<a href="#">
-									<img src="img/100x100.jpg" alt="">
-								</a>
-								<a href="#">
-									<img src="img/100x100.jpg" alt="">
-								</a>
-								<a href="#">
-									<img src="img/100x100.jpg" alt="">
-								</a>
+						<div class="item__top">
+							<a href="#" class="item__prev"></a>
+							<a href="#" class="item__next"></a>
+							<div class="item__slides cycle-slideshow"
+								data-cycle-timeout="0"
+								data-cycle-fx="fade"
+								data-cycle-slides="> div"
+								data-cycle-prev=".item__prev"
+								data-cycle-next=".item__next"
+								data-cycle-caption=".item__conter"
+								data-cycle-caption-template="{{slideNum}} / {{slideCount}}">
+								<div class="slide">
+									<img src="img/440x290.jpg" alt="">
+								</div>
+								<div class="slide">
+									<img src="img/440x290cat.jpg" alt="">
+								</div>
+								<div class="slide">
+									<img src="img/440x290.jpg" alt="">
+								</div>
+								<div class="slide slide_mod">
+									<img src="img/440x290cat.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="item__bot">
+							<div class="item__pager cycle-slideshow"
+								 data-cycle-timeout="0"
+								 data-cycle-fx="carousel"
+								 data-cycle-carousel-visible="4"
+								 data-cycle-carousel-fluid=true
+								 data-allow-wrap="false"
+								 data-cycle-slides="> div"
+								 >
+								<div class="slide"><img src="img/100x100.jpg" alt=""></div>
+								<div class="slide"><img src="img/100.gif" alt=""></div>
+								<div class="slide"><img src="img/100x100.jpg" alt=""></div>
+								<div class="slide"><img src="img/100.gif" alt=""></div>
 							</div>
 						</div>
 					</div>
+					<!-- END CAROUSEL -->
 					<div class="item__in">
 						<div class="item__text">В экспозицию выставки вошли более семидесяти произведений из фондов музея: живопись, графика, декоративно-прикладное искусство.</div>
 					</div>
 				</div>
 				<!-- banner -->
+				<!-- begin item  -->
+				<div class="item">
+				</div>
+				<!-- end item -->
 				<div class="banner">
 					<a href="#">
 						<img src="img/230x80.jpg" alt="">
